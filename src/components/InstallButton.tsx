@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { asset } from '../data/stories'
 
 /**
  * Chrome fires this instead of showing its own install UI, letting the page
@@ -95,9 +96,11 @@ export function InstallButton() {
         </p>
         <p className="install-note">
           لو الخيار مش موجود، غالبًا الجهاز على <strong>حساب أطفال</strong> بيمنع تثبيت
-          التطبيقات. التطبيق هيشتغل عادي من المتصفح — والقصص اللي فتحتها هتشتغل من غير نت
-          برضه.
+          التطبيقات — نزّل نسخة الأندرويد من تحت، وسطّبها من حساب ولي الأمر.
         </p>
+        <a className="apk-link" href={asset('StoryGarden.apk')} download>
+          <span aria-hidden>📦</span> نزّل تطبيق أندرويد (APK)
+        </a>
       </div>
     )
   }

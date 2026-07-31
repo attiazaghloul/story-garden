@@ -144,6 +144,21 @@
   line-height: 1.5;
 }
 
+.apk-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.7rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #db2777, #f472b6);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(219, 39, 119, 0.3);
+}
+
 .section-head {
   text-align: center;
   margin-bottom: 1.25rem;
