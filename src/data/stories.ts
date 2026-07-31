@@ -83,11 +83,20 @@ type RawSegment = { speaker: SpeakerId; mood: MoodId; en: string; ar: string }
 type RawPage = { id: string; image: string; segments: RawSegment[] }
 type RawStory = Omit<Story, 'pages'> & { pages: RawPage[] }
 
+/**
+ * Resolve a public-folder path against the deploy base. The app is served from
+ * a sub-path on GitHub Pages (/story-garden/), so root-absolute asset URLs
+ * would 404 there — everything must go through this.
+ */
+export function asset(path: string): string {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+}
+
 function segs(storyId: string, pageId: string, list: RawSegment[]): StorySegment[] {
   return list.map((s, idx) => ({
     ...s,
-    audioEn: `/audio/${storyId}/${pageId}-s${idx}-en.mp3`,
-    audioAr: `/audio/${storyId}/${pageId}-s${idx}-ar.mp3`,
+    audioEn: asset(`audio/${storyId}/${pageId}-s${idx}-en.mp3`),
+    audioAr: asset(`audio/${storyId}/${pageId}-s${idx}-ar.mp3`),
   }))
 }
 
@@ -95,7 +104,7 @@ function page(storyId: string, raw: RawPage): StoryPage {
   const segments = segs(storyId, raw.id, raw.segments)
   return {
     id: raw.id,
-    image: raw.image,
+    image: asset(raw.image),
     textEn: raw.segments.map((s) => s.en).join(' '),
     textAr: raw.segments.map((s) => s.ar).join(' '),
     segments,
@@ -105,6 +114,7 @@ function page(storyId: string, raw: RawPage): StoryPage {
 function buildStory(raw: RawStory): Story {
   return {
     ...raw,
+    coverImage: asset(raw.coverImage),
     pages: raw.pages.map((p) => page(raw.id, p)),
   }
 }

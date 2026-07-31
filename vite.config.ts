@@ -2,8 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
+// Served from https://<user>.github.io/story-garden/ — override with
+// BASE_PATH=/ when deploying to a domain root instead.
+const BASE = process.env.BASE_PATH ?? '/story-garden/'
+
 // https://vite.dev/config/
 export default defineConfig({
+  base: BASE,
   plugins: [
     react(),
     VitePWA({
@@ -16,8 +21,9 @@ export default defineConfig({
           'قصص أطفال تعليمية لسن ٤–٦ سنين — عربي مصري أو إنجليزي أمريكي، بأصوات ومشاعر.',
         lang: 'ar',
         dir: 'rtl',
-        start_url: '/',
-        scope: '/',
+        id: BASE,
+        start_url: BASE,
+        scope: BASE,
         display: 'standalone',
         orientation: 'landscape',
         background_color: '#fff9f2',
@@ -39,10 +45,10 @@ export default defineConfig({
         // first time a story is opened, so the install stays small.
         globPatterns: ['**/*.{js,css,html,svg}'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
-        navigateFallback: 'index.html',
+        navigateFallback: `${BASE}index.html`,
         runtimeCaching: [
           {
-            urlPattern: ({ url }) => url.pathname.startsWith('/audio/'),
+            urlPattern: ({ url }) => url.pathname.includes('/audio/'),
             handler: 'CacheFirst',
             options: {
               cacheName: 'story-audio',
@@ -52,7 +58,7 @@ export default defineConfig({
             },
           },
           {
-            urlPattern: ({ url }) => url.pathname.startsWith('/stories/'),
+            urlPattern: ({ url }) => url.pathname.includes('/stories/'),
             handler: 'CacheFirst',
             options: {
               cacheName: 'story-images',
