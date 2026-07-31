@@ -1,4 +1,5 @@
 import type { Story } from '../data/stories'
+import { InstallButton } from './InstallButton'
 
 type HomeProps = {
   stories: Story[]
@@ -30,6 +31,7 @@ export function Home({ stories, onOpenStory }: HomeProps) {
           <li>🎚️ سرعة الصوت</li>
           <li>🇪🇬 مصري · 🇺🇸 أمريكي</li>
         </ul>
+        <InstallButton />
       </header>
 
       <section className="library" aria-labelledby="library-heading">

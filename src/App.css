@@ -97,6 +97,46 @@
   box-shadow: var(--shadow-soft);
 }
 
+/* Shown only while the browser reports the app is installable. */
+.install-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.4rem auto 0;
+  padding: 0.85rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #db2777, #f472b6);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.02rem;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(219, 39, 119, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.install-btn:hover,
+.install-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(219, 39, 119, 0.45);
+}
+
+.install-btn:active {
+  transform: translateY(0);
+}
+
+.install-hint {
+  margin: 1.4rem auto 0;
+  max-width: 34rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(219, 39, 119, 0.25);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-soft);
+}
+
 .section-head {
   text-align: center;
   margin-bottom: 1.25rem;
