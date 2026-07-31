@@ -1,0 +1,220 @@
+{
+  "id": "luna-night-sky",
+  "pauseMs": 280,
+  "cast": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "label": "Narrator"
+      },
+      "luna": {
+        "voice": "en-US-AnaNeural",
+        "label": "Luna"
+      },
+      "star": {
+        "voice": "en-US-JennyNeural",
+        "label": "Star"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "label": "الراوي"
+      },
+      "luna": {
+        "voice": "ar-EG-SalmaNeural",
+        "label": "لونا"
+      },
+      "star": {
+        "voice": "ar-EG-ShakirNeural",
+        "label": "النجمة"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "p1",
+      "image": "/stories/luna/page1.jpg",
+      "textEn": "This is Luna the little bunny. Wow... look at the sky!",
+      "textAr": "دي لونا الأرنوبة الصغيرة. واو… بصوا السما!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "calm",
+          "en": "This is Luna the little bunny.",
+          "ar": "دي لونا الأرنوبة الصغيرة.",
+          "audioEn": "/audio/luna-night-sky/p1-s0-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p1-s0-ar.mp3"
+        },
+        {
+          "speaker": "luna",
+          "mood": "curious",
+          "en": "Wow... look at the sky!",
+          "ar": "واو… بصوا السما!",
+          "audioEn": "/audio/luna-night-sky/p1-s1-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p1-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "image": "/stories/luna/page2.jpg",
+      "textEn": "Night is coming. The room grows quiet. What is that shiny light?",
+      "textAr": "الليل قرب… والأوضة هدّت. إيه النور اللامع ده؟",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "gentle",
+          "en": "Night is coming. The room grows quiet.",
+          "ar": "الليل قرب… والأوضة هدّت.",
+          "audioEn": "/audio/luna-night-sky/p2-s0-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p2-s0-ar.mp3"
+        },
+        {
+          "speaker": "luna",
+          "mood": "curious",
+          "en": "What is that shiny light?",
+          "ar": "إيه النور اللامع ده؟",
+          "audioEn": "/audio/luna-night-sky/p2-s1-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p2-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "image": "/stories/luna/page3.jpg",
+      "textEn": "Luna steps outside. The dark feels big. I feel a little scared...",
+      "textAr": "لونا طلعت برّه… والضلمة باينة كبيرة. أنا خايفة شوية…",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "gentle",
+          "en": "Luna steps outside. The dark feels big.",
+          "ar": "لونا طلعت برّه… والضلمة باينة كبيرة.",
+          "audioEn": "/audio/luna-night-sky/p3-s0-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p3-s0-ar.mp3"
+        },
+        {
+          "speaker": "luna",
+          "mood": "sad",
+          "en": "I feel a little scared...",
+          "ar": "أنا خايفة شوية…",
+          "audioEn": "/audio/luna-night-sky/p3-s1-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p3-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "image": "/stories/luna/page4.jpg",
+      "textEn": "Then a friendly star twinkles near. Hello, Luna! Do not be afraid.",
+      "textAr": "وفجأة… نجمة لطيفة لمعت جنبها. أهلاً يا لونا! متخافيش.",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "warm",
+          "en": "Then a friendly star twinkles near.",
+          "ar": "وفجأة… نجمة لطيفة لمعت جنبها.",
+          "audioEn": "/audio/luna-night-sky/p4-s0-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p4-s0-ar.mp3"
+        },
+        {
+          "speaker": "star",
+          "mood": "kind",
+          "en": "Hello, Luna! Do not be afraid.",
+          "ar": "أهلاً يا لونا! متخافيش.",
+          "audioEn": "/audio/luna-night-sky/p4-s1-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p4-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "image": "/stories/luna/page5.jpg",
+      "textEn": "The night is soft. Stars are friends. Really? Night can be kind? Yes! Breathe slow. Look up.",
+      "textAr": "الليل هادي… والنجوم أصحاب. بجد؟ الليل ممكن يبقى حنين؟ أيوه! خدي نفس هادي وبصّي لفوق.",
+      "segments": [
+        {
+          "speaker": "star",
+          "mood": "calm",
+          "en": "The night is soft. Stars are friends.",
+          "ar": "الليل هادي… والنجوم أصحاب.",
+          "audioEn": "/audio/luna-night-sky/p5-s0-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p5-s0-ar.mp3"
+        },
+        {
+          "speaker": "luna",
+          "mood": "curious",
+          "en": "Really? Night can be kind?",
+          "ar": "بجد؟ الليل ممكن يبقى حنين؟",
+          "audioEn": "/audio/luna-night-sky/p5-s1-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p5-s1-ar.mp3"
+        },
+        {
+          "speaker": "star",
+          "mood": "happy",
+          "en": "Yes! Breathe slow. Look up.",
+          "ar": "أيوه! خدي نفس هادي وبصّي لفوق.",
+          "audioEn": "/audio/luna-night-sky/p5-s2-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p5-s2-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "image": "/stories/luna/page6.jpg",
+      "textEn": "Luna smiles under the quiet stars. I like the night now!",
+      "textAr": "لونا ابتسمت تحت النجوم الهادية. بقيت بحب الليل!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "happy",
+          "en": "Luna smiles under the quiet stars.",
+          "ar": "لونا ابتسمت تحت النجوم الهادية.",
+          "audioEn": "/audio/luna-night-sky/p6-s0-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p6-s0-ar.mp3"
+        },
+        {
+          "speaker": "luna",
+          "mood": "happy",
+          "en": "I like the night now!",
+          "ar": "بقيت بحب الليل!",
+          "audioEn": "/audio/luna-night-sky/p6-s1-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p6-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p7",
+      "image": "/stories/luna/page7.jpg",
+      "textEn": "Luna sleeps safe and calm. Good night, little friend. Good night, bright star.",
+      "textAr": "لونا نامت مرتاحة وآمنة. تصبحي على خير يا صاحبتى. تصبحي على خير يا نجمتي.",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "calm",
+          "en": "Luna sleeps safe and calm.",
+          "ar": "لونا نامت مرتاحة وآمنة.",
+          "audioEn": "/audio/luna-night-sky/p7-s0-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p7-s0-ar.mp3"
+        },
+        {
+          "speaker": "star",
+          "mood": "gentle",
+          "en": "Good night, little friend.",
+          "ar": "تصبحي على خير يا صاحبتى.",
+          "audioEn": "/audio/luna-night-sky/p7-s1-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p7-s1-ar.mp3"
+        },
+        {
+          "speaker": "luna",
+          "mood": "calm",
+          "en": "Good night, bright star.",
+          "ar": "تصبحي على خير يا نجمتي.",
+          "audioEn": "/audio/luna-night-sky/p7-s2-en.mp3",
+          "audioAr": "/audio/luna-night-sky/p7-s2-ar.mp3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets — never commit API keys
+.env
+.env.*
+!.env.example
+
+# Throwaway voice experiments (the adult-pitch backups ARE kept: they let us
+# re-pitch the English audio without paying for TTS again)
+audio-backup/_eltest/
+audio-backup/_pitchtest/
+audio-backup/compare.html
+audio-backup/pitch.html
+
+# PWA build output
+dev-dist/

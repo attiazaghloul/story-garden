@@ -1,0 +1,22 @@
+{
+  "_comment": "ElevenLabs English voice cast (default premade voices, free-tier allowed). One fixed voice per character; narrator is George across all stories for brand consistency. Used by generate_audio_11labs_en.py.",
+  "voices": {
+    "narrator": { "name": "George", "voice_id": "JBFqnCBsd6RMkjVDRZzb" },
+    "pip": { "name": "Jessica", "voice_id": "cgSgspJ2msm6clMCkdW9" },
+    "mimi": { "name": "Laura", "voice_id": "FGY2WhTYpPnrIDTdsKH5" },
+    "luna": { "name": "Lily", "voice_id": "pFZP5JQG7iQjIQuC4Bku" },
+    "star": { "name": "Alice", "voice_id": "Xb7hH8MSUJpSbSDYk0k2" },
+    "sam": { "name": "Will", "voice_id": "bIHbv24MWmeRgasZH58o" },
+    "mama": { "name": "Sarah", "voice_id": "EXAVITQu4vr4xnSDxMaL" },
+    "nour": { "name": "Bella", "voice_id": "hpp4J3VqNfWAUOO0d1Us" },
+    "zuzu": { "name": "Liam", "voice_id": "TX3LPaxmHKxFdv7VOQHJ" },
+    "riri": { "name": "Matilda", "voice_id": "XrExE9yKIg1WjnnlVkGX" },
+    "tito": { "name": "Chris", "voice_id": "iP95p4xoKVk53GoZ742B" },
+    "titoMama": { "name": "Sarah", "voice_id": "EXAVITQu4vr4xnSDxMaL" },
+    "brushy": { "name": "Callum", "voice_id": "N2lVS1w4EtoT3dr4eOWO" },
+    "kiko": { "name": "Eric", "voice_id": "cjVigY5qzO86Huf0OWal" },
+    "friend": { "name": "Laura", "voice_id": "FGY2WhTYpPnrIDTdsKH5" },
+    "lulu": { "name": "Jessica", "voice_id": "cgSgspJ2msm6clMCkdW9" },
+    "ducky": { "name": "Bella", "voice_id": "hpp4J3VqNfWAUOO0d1Us" }
+  }
+}

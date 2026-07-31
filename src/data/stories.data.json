@@ -1,0 +1,1498 @@
+[
+  {
+    "id": "pip-learns-to-share",
+    "title": "Pip Learns to Share",
+    "titleAr": "بيب يتعلّم المشاركة",
+    "subtitle": "Friendship and a red ball",
+    "subtitleAr": "صداقة وكرة حمرا",
+    "coverImage": "/stories/pip/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Sharing",
+    "themeAr": "المشاركة",
+    "mainGoalEn": "Sharing toys makes play more fun.",
+    "mainGoalAr": "مشاركة الألعاب بتخلي اللعب أحلى.",
+    "learningGoals": [
+      "Share with friends",
+      "Notice feelings",
+      "Tap words to hear them"
+    ],
+    "learningGoalsAr": [
+      "شارك أصحابك",
+      "لاحظ المشاعر",
+      "دوس على الكلمة تسمعها"
+    ],
+    "cast": [
+      "narrator",
+      "pip",
+      "mimi"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/pip/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Look! This is Pip.",
+            "ar": "بصّوا يا حبايب… أهو بيب!"
+          },
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "Pip is a little puppy.",
+            "ar": "بيب كلب صغير كيوت أوي، ووشّه باشوش."
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/pip/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Pip has so many toys.",
+            "ar": "بيب عنده ألعاب كتير أوي في الأوضة."
+          },
+          {
+            "speaker": "pip",
+            "mood": "excited",
+            "en": "Yay! I love my toys!",
+            "ar": "ياااي! بحب ألعابي موت!"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/pip/page3.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "curious",
+            "en": "Knock knock! Here comes Mimi the kitten.",
+            "ar": "فجأة… الباب اتفتح، وميمي القطة جت!"
+          },
+          {
+            "speaker": "mimi",
+            "mood": "happy",
+            "en": "Hello, Pip! Can I play?",
+            "ar": "أهلااا يا بيب! ألعب معاك؟"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/pip/page4.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Pip holds his toys tight.",
+            "ar": "بيب حضن ألعابه وقربها منه."
+          },
+          {
+            "speaker": "pip",
+            "mood": "sad",
+            "en": "These are mine...",
+            "ar": "دي بتاعتي أنا…"
+          },
+          {
+            "speaker": "mimi",
+            "mood": "sad",
+            "en": "Oh... I just wanted a friend.",
+            "ar": "طب أنا كنت عايزة ألعب معاك وبس…"
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/pip/page5.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Then Pip thinks for a moment.",
+            "ar": "بيب سكت شوية… وفكّر."
+          },
+          {
+            "speaker": "pip",
+            "mood": "kind",
+            "en": "Here, Mimi. Take the red ball!",
+            "ar": "خدي يا ميمي! اهي الكرة الحمرا."
+          },
+          {
+            "speaker": "mimi",
+            "mood": "happy",
+            "en": "Thank you, Pip!",
+            "ar": "ياااي شكراً يا بيب!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/pip/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "They play and laugh together!",
+            "ar": "اللعب بقى حلو… والضحك ملى الأوضة!"
+          },
+          {
+            "speaker": "pip",
+            "mood": "excited",
+            "en": "This is so much fun!",
+            "ar": "يا سلام! إحنا بنتفسّح أوي!"
+          },
+          {
+            "speaker": "mimi",
+            "mood": "excited",
+            "en": "Best day ever!",
+            "ar": "أحلى يوم في حياتي!"
+          }
+        ]
+      },
+      {
+        "id": "p7",
+        "image": "/stories/pip/page7.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Sharing makes friends happy.",
+            "ar": "شوفوا بقى… المشاركة بتحلّي الصداقة."
+          },
+          {
+            "speaker": "pip",
+            "mood": "excited",
+            "en": "Yay! Friends forever!",
+            "ar": "ياااي! إحنا أصحاب على طول!"
+          },
+          {
+            "speaker": "mimi",
+            "mood": "happy",
+            "en": "Yay, Pip!",
+            "ar": "برافو يا بيب!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luna-night-sky",
+    "title": "Luna and the Night Sky",
+    "titleAr": "لونا وسما الليل",
+    "subtitle": "Night can feel calm",
+    "subtitleAr": "الليل ممكن يبقى هادي",
+    "coverImage": "/stories/luna/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Calm",
+    "themeAr": "الهدوء",
+    "mainGoalEn": "Night can be calm — breathe and look at the stars.",
+    "mainGoalAr": "الليل ممكن يبقى هادي — خدي نفس وبصّي للنجوم.",
+    "learningGoals": [
+      "Night is not always scary",
+      "Breathe slow",
+      "Stars can feel friendly"
+    ],
+    "learningGoalsAr": [
+      "الليل مش دايمًا مخيف",
+      "نفس هادي",
+      "النجوم ممكن تبقى لطيفة"
+    ],
+    "cast": [
+      "narrator",
+      "luna",
+      "star"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/luna/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "calm",
+            "en": "This is Luna the little bunny.",
+            "ar": "دي لونا الأرنوبة الصغيرة."
+          },
+          {
+            "speaker": "luna",
+            "mood": "curious",
+            "en": "Wow... look at the sky!",
+            "ar": "واو… بصوا السما!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/luna/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Night is coming. The room grows quiet.",
+            "ar": "الليل قرب… والأوضة هدّت."
+          },
+          {
+            "speaker": "luna",
+            "mood": "curious",
+            "en": "What is that shiny light?",
+            "ar": "إيه النور اللامع ده؟"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/luna/page3.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Luna steps outside. The dark feels big.",
+            "ar": "لونا طلعت برّه… والضلمة باينة كبيرة."
+          },
+          {
+            "speaker": "luna",
+            "mood": "sad",
+            "en": "I feel a little scared...",
+            "ar": "أنا خايفة شوية…"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/luna/page4.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Then a friendly star twinkles near.",
+            "ar": "وفجأة… نجمة لطيفة لمعت جنبها."
+          },
+          {
+            "speaker": "star",
+            "mood": "kind",
+            "en": "Hello, Luna! Do not be afraid.",
+            "ar": "أهلاً يا لونا! متخافيش."
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/luna/page5.jpg",
+        "segments": [
+          {
+            "speaker": "star",
+            "mood": "calm",
+            "en": "The night is soft. Stars are friends.",
+            "ar": "الليل هادي… والنجوم أصحاب."
+          },
+          {
+            "speaker": "luna",
+            "mood": "curious",
+            "en": "Really? Night can be kind?",
+            "ar": "بجد؟ الليل ممكن يبقى حنين؟"
+          },
+          {
+            "speaker": "star",
+            "mood": "happy",
+            "en": "Yes! Breathe slow. Look up.",
+            "ar": "أيوه! خدي نفس هادي وبصّي لفوق."
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/luna/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "Luna smiles under the quiet stars.",
+            "ar": "لونا ابتسمت تحت النجوم الهادية."
+          },
+          {
+            "speaker": "luna",
+            "mood": "happy",
+            "en": "I like the night now!",
+            "ar": "بقيت بحب الليل!"
+          }
+        ]
+      },
+      {
+        "id": "p7",
+        "image": "/stories/luna/page7.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "calm",
+            "en": "Luna sleeps safe and calm.",
+            "ar": "لونا نامت مرتاحة وآمنة."
+          },
+          {
+            "speaker": "star",
+            "mood": "gentle",
+            "en": "Good night, little friend.",
+            "ar": "تصبحي على خير يا صاحبتى."
+          },
+          {
+            "speaker": "luna",
+            "mood": "calm",
+            "en": "Good night, bright star.",
+            "ar": "تصبحي على خير يا نجمتي."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sam-says-please",
+    "title": "Sam Says Please",
+    "titleAr": "سام بيقول لو سمحت",
+    "subtitle": "Magic manners",
+    "subtitleAr": "كلمات الحلاوة",
+    "coverImage": "/stories/sam/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Manners",
+    "themeAr": "الذوق",
+    "mainGoalEn": "Say please when you ask, and thank you when you get.",
+    "mainGoalAr": "قول لو سمحت لما تطلب، وشكرًا لما تاخد.",
+    "learningGoals": [
+      "Please",
+      "Thank you",
+      "Kind asking"
+    ],
+    "learningGoalsAr": [
+      "لو سمحت",
+      "شكرًا",
+      "الطلب بلطف"
+    ],
+    "cast": [
+      "narrator",
+      "sam",
+      "mama"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/sam/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "This is Sam the little bear.",
+            "ar": "أهو سام الدبدوب الصغير."
+          },
+          {
+            "speaker": "sam",
+            "mood": "happy",
+            "en": "I love cookies!",
+            "ar": "بحب البسكوت موت!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/sam/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Sam sees a cookie on the table.",
+            "ar": "سام شاف بسكوتة على الترابيزة."
+          },
+          {
+            "speaker": "sam",
+            "mood": "excited",
+            "en": "I want that cookie now!",
+            "ar": "عايز البسكوتة دي دلوقتي!"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/sam/page3.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Sam reaches without asking.",
+            "ar": "سام مدّ إيده من غير ما يسأل."
+          },
+          {
+            "speaker": "mama",
+            "mood": "gentle",
+            "en": "Wait, Sam. Let's use kind words.",
+            "ar": "استنى يا سام. خلينا نقول كلام حلو."
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/sam/page4.jpg",
+        "segments": [
+          {
+            "speaker": "mama",
+            "mood": "kind",
+            "en": "Can you say please?",
+            "ar": "تقدر تقول: لو سمحت؟"
+          },
+          {
+            "speaker": "sam",
+            "mood": "curious",
+            "en": "Please...?",
+            "ar": "لو سمحت…؟"
+          },
+          {
+            "speaker": "mama",
+            "mood": "proud",
+            "en": "Yes! That sounds so kind.",
+            "ar": "براڤو! كده كلام جميل."
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/sam/page5.jpg",
+        "segments": [
+          {
+            "speaker": "sam",
+            "mood": "kind",
+            "en": "Mama, may I have a cookie, please?",
+            "ar": "ماما، ممكن بسكوتة لو سمحت؟"
+          },
+          {
+            "speaker": "mama",
+            "mood": "happy",
+            "en": "Of course, my sweet Sam!",
+            "ar": "طبعًا يا حبيبي سام!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/sam/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "Mama gives Sam the cookie.",
+            "ar": "ماما إدّت لسام البسكوتة."
+          },
+          {
+            "speaker": "sam",
+            "mood": "excited",
+            "en": "Thank you, Mama!",
+            "ar": "شكرًا يا ماما!"
+          },
+          {
+            "speaker": "mama",
+            "mood": "proud",
+            "en": "You are very polite!",
+            "ar": "إنت مؤدّب أوي!"
+          }
+        ]
+      },
+      {
+        "id": "p7",
+        "image": "/stories/sam/page7.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Please and thank you make hearts happy.",
+            "ar": "لو سمحت وشكرًا بيفرحوا القلب."
+          },
+          {
+            "speaker": "sam",
+            "mood": "happy",
+            "en": "I can say the magic words!",
+            "ar": "أقدر أقول الكلمات السحرية!"
+          },
+          {
+            "speaker": "mama",
+            "mood": "kind",
+            "en": "I am proud of you, Sam.",
+            "ar": "فخورة بيك يا سام."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nour-names-feelings",
+    "title": "Nour Names Feelings",
+    "titleAr": "نور بتسمّي مشاعرها",
+    "subtitle": "Happy, sad, angry, calm",
+    "subtitleAr": "فرحان · زعلان · زعلان أوي · هادي",
+    "coverImage": "/stories/nour/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Feelings",
+    "themeAr": "المشاعر",
+    "mainGoalEn": "Name your feeling: happy, sad, angry, or calm.",
+    "mainGoalAr": "سمّي شعورك: فرحان، زعلان، زعلان أوي، أو هادي.",
+    "learningGoals": [
+      "Name feelings",
+      "It is OK to feel",
+      "Words help big feelings"
+    ],
+    "learningGoalsAr": [
+      "سمّي مشاعرك",
+      "عادي تحس",
+      "الكلمة بتساعد"
+    ],
+    "cast": [
+      "narrator",
+      "nour"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/nour/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "This is Nour the little fox.",
+            "ar": "دي نور الثعلبة الصغيرة."
+          },
+          {
+            "speaker": "nour",
+            "mood": "curious",
+            "en": "I have big feelings inside!",
+            "ar": "عندي مشاعر كبيرة جوايا!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/nour/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Sometimes Nour feels sad.",
+            "ar": "ساعات نور بتزعل."
+          },
+          {
+            "speaker": "nour",
+            "mood": "sad",
+            "en": "I feel sad. My tears come out.",
+            "ar": "أنا زعلانة… والدموع نزلت."
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/nour/page3.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Sometimes Nour feels angry.",
+            "ar": "وسعات نور بتزعل أوي."
+          },
+          {
+            "speaker": "nour",
+            "mood": "sad",
+            "en": "I feel angry. My face is hot!",
+            "ar": "أنا زعلانة أوي! وشي سخن!"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/nour/page4.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "calm",
+            "en": "Nour takes a slow breath.",
+            "ar": "نور أخدت نفس طويل هادي."
+          },
+          {
+            "speaker": "nour",
+            "mood": "calm",
+            "en": "Breathe in... breathe out... I feel calm.",
+            "ar": "شهيق… زفير… أنا هادية."
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/nour/page5.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "Nour can name her feelings!",
+            "ar": "نور قدرت تسمّي مشاعرها!"
+          },
+          {
+            "speaker": "nour",
+            "mood": "proud",
+            "en": "Happy, sad, angry, calm — I know!",
+            "ar": "فرحان، زعلان، زعلان أوي، هادي… عارفاهم!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/nour/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Naming feelings helps hearts feel safe.",
+            "ar": "تسمية المشاعر بتخلي القلب مرتاح."
+          },
+          {
+            "speaker": "nour",
+            "mood": "happy",
+            "en": "I can say how I feel!",
+            "ar": "أقدر أقول إحساسي!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zuzu-counts",
+    "title": "Zuzu Counts to Five",
+    "titleAr": "زوزو بتعدّ لخمسة",
+    "subtitle": "One, two, three, four, five!",
+    "subtitleAr": "واحد اتنين تلاتة أربعة خمسة!",
+    "coverImage": "/stories/zuzu/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Counting",
+    "themeAr": "العدّ",
+    "mainGoalEn": "Count from one to five out loud.",
+    "mainGoalAr": "عدّ من واحد لخمسة بصوت عالي.",
+    "learningGoals": [
+      "Count 1–5",
+      "Point and say numbers",
+      "Celebrate practice"
+    ],
+    "learningGoalsAr": [
+      "عدّ من 1 لـ 5",
+      "ور وقول الرقم",
+      "الفرح بالتدريب"
+    ],
+    "cast": [
+      "narrator",
+      "zuzu"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/zuzu/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "This is Zuzu the little chick.",
+            "ar": "دي زوزو الكتكوتة الصغيرة."
+          },
+          {
+            "speaker": "zuzu",
+            "mood": "excited",
+            "en": "I love to count!",
+            "ar": "بحب أعدّ موت!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/zuzu/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Zuzu finds one red block.",
+            "ar": "زوزو لقت بلوكة حمرا واحدة."
+          },
+          {
+            "speaker": "zuzu",
+            "mood": "happy",
+            "en": "One!",
+            "ar": "واحد!"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/zuzu/page3.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "curious",
+            "en": "Now there are more blocks.",
+            "ar": "دلوقتي بقى فيه بلوكات أكتر."
+          },
+          {
+            "speaker": "zuzu",
+            "mood": "excited",
+            "en": "One, two, three!",
+            "ar": "واحد… اتنين… تلاتة!"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/zuzu/page4.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "Zuzu lines up five blocks.",
+            "ar": "زوزو رتّبت خمس بلوكات."
+          },
+          {
+            "speaker": "zuzu",
+            "mood": "excited",
+            "en": "One, two, three, four, five!",
+            "ar": "واحد اتنين تلاتة أربعة خمسة!"
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/zuzu/page5.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "proud",
+            "en": "Zuzu did it!",
+            "ar": "زوزو قدرت!"
+          },
+          {
+            "speaker": "zuzu",
+            "mood": "excited",
+            "en": "I can count to five!",
+            "ar": "أقدر أعدّ لخمسة!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/zuzu/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Counting helps little minds grow strong.",
+            "ar": "العدّ بيخلّي العقل الصغير أقوى."
+          },
+          {
+            "speaker": "zuzu",
+            "mood": "happy",
+            "en": "Counting is fun!",
+            "ar": "العدّ لعب حلو!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "riri-colors",
+    "title": "Riri Finds Colors",
+    "titleAr": "ريري بتلاقي الألوان",
+    "subtitle": "Red, blue, yellow, green",
+    "subtitleAr": "أحمر · أزرق · أصفر · أخضر",
+    "coverImage": "/stories/riri/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Colors",
+    "themeAr": "الألوان",
+    "mainGoalEn": "Name colors: red, blue, yellow, and green.",
+    "mainGoalAr": "سمّي الألوان: أحمر، أزرق، أصفر، وأخضر.",
+    "learningGoals": [
+      "Name basic colors",
+      "Look and say",
+      "Colors are everywhere"
+    ],
+    "learningGoalsAr": [
+      "سمّي ألوان أساسية",
+      "شوف وقول",
+      "الألوان في كل حتة"
+    ],
+    "cast": [
+      "narrator",
+      "riri"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/riri/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "This is Riri the rainbow bird.",
+            "ar": "دي ريري العصفورة الملونة."
+          },
+          {
+            "speaker": "riri",
+            "mood": "excited",
+            "en": "I love colors!",
+            "ar": "بحب الألوان!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/riri/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "curious",
+            "en": "Riri sees a bright flower.",
+            "ar": "ريري شافت وردة لمّاعة."
+          },
+          {
+            "speaker": "riri",
+            "mood": "happy",
+            "en": "Red! This is red!",
+            "ar": "أحمر! دي حمرا!"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/riri/page3.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "The sky and grass are near.",
+            "ar": "السما والعشب حوالينها."
+          },
+          {
+            "speaker": "riri",
+            "mood": "excited",
+            "en": "Blue sky! Green grass!",
+            "ar": "سما زرقا! عشب أخضر!"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/riri/page4.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "The sun is shining.",
+            "ar": "الشمس بتلمع."
+          },
+          {
+            "speaker": "riri",
+            "mood": "happy",
+            "en": "Yellow sun! Hello, yellow!",
+            "ar": "شمس صفرا! أهلاً يا أصفر!"
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/riri/page5.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "excited",
+            "en": "A rainbow fills the sky!",
+            "ar": "قوس قزح ملى السما!"
+          },
+          {
+            "speaker": "riri",
+            "mood": "excited",
+            "en": "Red, blue, yellow, green — wow!",
+            "ar": "أحمر أزرق أصفر أخضر… يا سلام!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/riri/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Colors make the world beautiful.",
+            "ar": "الألوان بتحلّي الدنيا."
+          },
+          {
+            "speaker": "riri",
+            "mood": "proud",
+            "en": "I know my colors!",
+            "ar": "أنا عارفة ألواني!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tito-helps",
+    "title": "Tito Helps at Home",
+    "titleAr": "تيتو بيساعد في البيت",
+    "subtitle": "Little helpers are heroes",
+    "subtitleAr": "المساعد الصغير بطل",
+    "coverImage": "/stories/tito/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Helping",
+    "themeAr": "المساعدة",
+    "mainGoalEn": "Helping at home is kind and useful.",
+    "mainGoalAr": "المساعدة في البيت لطف وفائدة.",
+    "learningGoals": [
+      "Help tidy up",
+      "Help water plants",
+      "Feel proud of helping"
+    ],
+    "learningGoalsAr": [
+      "ساعد في الترتيب",
+      "ساعد في الريّ",
+      "افرح إنك ساعدت"
+    ],
+    "cast": [
+      "narrator",
+      "tito",
+      "titoMama"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/tito/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "This is Tito the little elephant.",
+            "ar": "أهو تيتو الفيل الصغير."
+          },
+          {
+            "speaker": "tito",
+            "mood": "happy",
+            "en": "I can help today!",
+            "ar": "أقدر أساعد النهارده!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/tito/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Toys are on the floor.",
+            "ar": "الألعاب على الأرض."
+          },
+          {
+            "speaker": "titoMama",
+            "mood": "kind",
+            "en": "Tito, can you help pick up toys?",
+            "ar": "تيتو، تقدر تساعدنا نلمّ الألعاب؟"
+          },
+          {
+            "speaker": "tito",
+            "mood": "happy",
+            "en": "Yes, Mama!",
+            "ar": "أيوه يا ماما!"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/tito/page3.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Tito waters the plants carefully.",
+            "ar": "تيتو بيسقي الزرع بالراحة."
+          },
+          {
+            "speaker": "tito",
+            "mood": "calm",
+            "en": "Drink, little plants!",
+            "ar": "اتشرّبوا يا زرع!"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/tito/page4.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "Tito carries a small basket.",
+            "ar": "تيتو شايل سلة صغيرة."
+          },
+          {
+            "speaker": "tito",
+            "mood": "proud",
+            "en": "Helping feels good!",
+            "ar": "المساعدة حلوة أوي!"
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/tito/page5.jpg",
+        "segments": [
+          {
+            "speaker": "titoMama",
+            "mood": "proud",
+            "en": "Thank you, Tito! You are a great helper.",
+            "ar": "شكرًا يا تيتو! إنت مساعد شاطر."
+          },
+          {
+            "speaker": "tito",
+            "mood": "excited",
+            "en": "I love helping!",
+            "ar": "بحب أساعد!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/tito/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Little helpers make homes happy.",
+            "ar": "المساعد الصغير بيفرح البيت."
+          },
+          {
+            "speaker": "tito",
+            "mood": "happy",
+            "en": "I can help every day!",
+            "ar": "أقدر أساعد كل يوم!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brushy-teeth",
+    "title": "Brushy Brushes Teeth",
+    "titleAr": "فرّوش بينضّف سنانُه",
+    "subtitle": "Morning and night, brush bright",
+    "subtitleAr": "صبح وليل… سنان نضيفة",
+    "coverImage": "/stories/brushy/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Hygiene",
+    "themeAr": "النظافة",
+    "mainGoalEn": "Brush your teeth morning and night.",
+    "mainGoalAr": "نظّف سنانك الصبح وبالليل.",
+    "learningGoals": [
+      "Brush morning and night",
+      "Brush gently",
+      "Clean teeth smile bright"
+    ],
+    "learningGoalsAr": [
+      "فرّش صبح وليل",
+      "بلطف",
+      "السنان النضيفة بتلمع"
+    ],
+    "cast": [
+      "narrator",
+      "brushy"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/brushy/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "This is Brushy the little hippo.",
+            "ar": "أهو فرّوش فرس النهر الصغير."
+          },
+          {
+            "speaker": "brushy",
+            "mood": "happy",
+            "en": "Time for my teeth!",
+            "ar": "وقت سنانى!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/brushy/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Brushy looks in the mirror.",
+            "ar": "فرّوش بص في المراية."
+          },
+          {
+            "speaker": "brushy",
+            "mood": "curious",
+            "en": "My teeth need a wash!",
+            "ar": "سنانى محتاجين غُسلة!"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/brushy/page3.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "calm",
+            "en": "Brushy brushes up and down.",
+            "ar": "فرّوش بيفرش فوق وتحت."
+          },
+          {
+            "speaker": "brushy",
+            "mood": "calm",
+            "en": "Brush, brush, brush... gently!",
+            "ar": "فرّش فرّش فرّش… بالراحة!"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/brushy/page4.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Foam smiles in the sink.",
+            "ar": "الرغوة بتضحك في الحوض."
+          },
+          {
+            "speaker": "brushy",
+            "mood": "happy",
+            "en": "Almost done!",
+            "ar": "خلّصت تقريبًا!"
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/brushy/page5.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "proud",
+            "en": "Brushy smiles so bright!",
+            "ar": "فرّوش ابتسم ولمّع!"
+          },
+          {
+            "speaker": "brushy",
+            "mood": "excited",
+            "en": "Clean teeth! Super smile!",
+            "ar": "سنان نضيفة! ابتسامة سوبر!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/brushy/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Brush morning and night for a healthy smile.",
+            "ar": "فرّش صبح وليل عشان ابتسامة صحية."
+          },
+          {
+            "speaker": "brushy",
+            "mood": "proud",
+            "en": "I brush every day!",
+            "ar": "بفرّش كل يوم!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kiko-waits",
+    "title": "Kiko Waits His Turn",
+    "titleAr": "كيكو بيستنى دوره",
+    "subtitle": "Patience at the playground",
+    "subtitleAr": "الصبر في الملعب",
+    "coverImage": "/stories/kiko/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Patience",
+    "themeAr": "الصبر",
+    "mainGoalEn": "Wait your turn — then play is fair and fun.",
+    "mainGoalAr": "استنى دورك — كده اللعب عادل وحلو.",
+    "learningGoals": [
+      "Wait in line",
+      "Be patient",
+      "Turns make play fair"
+    ],
+    "learningGoalsAr": [
+      "استنى في الطابور",
+      "اصبر",
+      "الدور بيخلّي اللعب عادل"
+    ],
+    "cast": [
+      "narrator",
+      "kiko",
+      "friend"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/kiko/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "This is Kiko the little monkey.",
+            "ar": "أهو كيكو القرد الصغير."
+          },
+          {
+            "speaker": "kiko",
+            "mood": "excited",
+            "en": "I want the slide now!",
+            "ar": "عايز الزحلوقة دلوقتي!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/kiko/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "A friend is already on the slide.",
+            "ar": "فيه صاحب لسه على الزحلوقة."
+          },
+          {
+            "speaker": "kiko",
+            "mood": "sad",
+            "en": "Waiting is hard...",
+            "ar": "الانتظار صعب…"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/kiko/page3.jpg",
+        "segments": [
+          {
+            "speaker": "friend",
+            "mood": "kind",
+            "en": "Please wait, Kiko. Your turn is next!",
+            "ar": "استنى يا كيكو. دورك الجاي!"
+          },
+          {
+            "speaker": "kiko",
+            "mood": "calm",
+            "en": "OK... I can wait.",
+            "ar": "طيب… أقدر أستنى."
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/kiko/page4.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Kiko takes a breath and waits.",
+            "ar": "كيكو أخد نفس واستنى."
+          },
+          {
+            "speaker": "kiko",
+            "mood": "calm",
+            "en": "I am waiting my turn.",
+            "ar": "بستنى دوري."
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/kiko/page5.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "Now it is Kiko's turn!",
+            "ar": "بقى دور كيكو!"
+          },
+          {
+            "speaker": "kiko",
+            "mood": "excited",
+            "en": "Weeee! Waiting was worth it!",
+            "ar": "ياااي! الانتظار كان يستاهل!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/kiko/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Waiting your turn makes play fair for everyone.",
+            "ar": "استنى دورك عشان اللعب يبقى عدل للكل."
+          },
+          {
+            "speaker": "kiko",
+            "mood": "proud",
+            "en": "I can wait!",
+            "ar": "أقدر أستنى!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lulu-says-sorry",
+    "title": "Lulu Says Sorry",
+    "titleAr": "لولو بتقول آسفة",
+    "subtitle": "Sorry fixes little hearts",
+    "subtitleAr": "آسف بتصلح القلوب الصغيرة",
+    "coverImage": "/stories/lulu/page1.jpg",
+    "ageLabel": "4–6 سنين",
+    "theme": "Apology",
+    "themeAr": "الاعتذار",
+    "mainGoalEn": "If you hurt someone, say sorry and make it better.",
+    "mainGoalAr": "لو زعّلت حد، قول آسف وحاول تصلّح.",
+    "learningGoals": [
+      "Say sorry",
+      "Fix what you can",
+      "Friends forgive"
+    ],
+    "learningGoalsAr": [
+      "قول آسف",
+      "صلّح اللي تقدر",
+      "الأصحاب بيسامحوا"
+    ],
+    "cast": [
+      "narrator",
+      "lulu",
+      "ducky"
+    ],
+    "pages": [
+      {
+        "id": "p1",
+        "image": "/stories/lulu/page1.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "This is Lulu the little lamb.",
+            "ar": "دي لولو الخروفة الصغيرة."
+          },
+          {
+            "speaker": "lulu",
+            "mood": "happy",
+            "en": "I love to play!",
+            "ar": "بحب ألعب!"
+          }
+        ]
+      },
+      {
+        "id": "p2",
+        "image": "/stories/lulu/page2.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "gentle",
+            "en": "Oh no! Lulu knocks the blocks down.",
+            "ar": "يا خسارة! لولو وقّعت البلوكات."
+          },
+          {
+            "speaker": "ducky",
+            "mood": "sad",
+            "en": "My tower fell...",
+            "ar": "برجي وقع…"
+          }
+        ]
+      },
+      {
+        "id": "p3",
+        "image": "/stories/lulu/page3.jpg",
+        "segments": [
+          {
+            "speaker": "lulu",
+            "mood": "sad",
+            "en": "I am sorry, Ducky.",
+            "ar": "أنا آسفة يا بطوطة."
+          },
+          {
+            "speaker": "lulu",
+            "mood": "kind",
+            "en": "Can I help build it again?",
+            "ar": "أساعدك نبنيه تاني؟"
+          }
+        ]
+      },
+      {
+        "id": "p4",
+        "image": "/stories/lulu/page4.jpg",
+        "segments": [
+          {
+            "speaker": "ducky",
+            "mood": "kind",
+            "en": "Thank you for saying sorry.",
+            "ar": "شكرًا إنك قلتي آسفة."
+          },
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "They build the tower together.",
+            "ar": "بنوا البرج مع بعض."
+          }
+        ]
+      },
+      {
+        "id": "p5",
+        "image": "/stories/lulu/page5.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "happy",
+            "en": "Now the friends hug and smile.",
+            "ar": "الأصحاب حضنوا بعض وابتسموا."
+          },
+          {
+            "speaker": "lulu",
+            "mood": "happy",
+            "en": "Sorry helps hearts feel better!",
+            "ar": "آسف بتريّح القلب!"
+          }
+        ]
+      },
+      {
+        "id": "p6",
+        "image": "/stories/lulu/page6.jpg",
+        "segments": [
+          {
+            "speaker": "narrator",
+            "mood": "warm",
+            "en": "Sorry is a brave and kind word.",
+            "ar": "آسف كلمة شجاعة ولطيفة."
+          },
+          {
+            "speaker": "lulu",
+            "mood": "proud",
+            "en": "I can say sorry!",
+            "ar": "أقدر أقول آسفة!"
+          },
+          {
+            "speaker": "ducky",
+            "mood": "happy",
+            "en": "Friends forever!",
+            "ar": "أصحاب على طول!"
+          }
+        ]
+      }
+    ]
+  }
+]

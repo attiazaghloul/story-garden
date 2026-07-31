@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Cairo:wght@600;700;800&display=swap');
+
+:root {
+  --ink: #1e293b;
+  --muted: #64748b;
+  --accent: #db2777;
+  --accent-deep: #9a3412;
+  --shadow-soft: 0 8px 20px rgba(15, 23, 42, 0.06);
+  --shadow-card: 0 14px 34px rgba(15, 23, 42, 0.08);
+  --font-display: 'Nunito', 'Cairo', system-ui, sans-serif;
+  --font-ui: 'Cairo', 'Nunito', system-ui, sans-serif;
+  font-family: var(--font-ui);
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--ink);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  background: #fff9f2;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* English story text should stay LTR even in RTL UI */
+.story-english,
+.hero-title-en,
+.story-card-title small,
+.reader-top-info strong {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+:focus-visible {
+  outline: 3px solid #a78bfa;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "id": "sam-says-please",
+  "pauseMs": 280,
+  "cast": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "label": "Narrator"
+      },
+      "sam": {
+        "voice": "en-US-AnaNeural",
+        "label": "Sam"
+      },
+      "mama": {
+        "voice": "en-US-JennyNeural",
+        "label": "Mama"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "label": "الراوي"
+      },
+      "sam": {
+        "voice": "ar-EG-ShakirNeural",
+        "label": "سام"
+      },
+      "mama": {
+        "voice": "ar-EG-SalmaNeural",
+        "label": "ماما"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "p1",
+      "image": "/stories/sam/page1.jpg",
+      "textEn": "This is Sam the little bear. I love cookies!",
+      "textAr": "أهو سام الدبدوب الصغير. بحب البسكوت موت!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "warm",
+          "en": "This is Sam the little bear.",
+          "ar": "أهو سام الدبدوب الصغير.",
+          "audioEn": "/audio/sam-says-please/p1-s0-en.mp3",
+          "audioAr": "/audio/sam-says-please/p1-s0-ar.mp3"
+        },
+        {
+          "speaker": "sam",
+          "mood": "happy",
+          "en": "I love cookies!",
+          "ar": "بحب البسكوت موت!",
+          "audioEn": "/audio/sam-says-please/p1-s1-en.mp3",
+          "audioAr": "/audio/sam-says-please/p1-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "image": "/stories/sam/page2.jpg",
+      "textEn": "Sam sees a cookie on the table. I want that cookie now!",
+      "textAr": "سام شاف بسكوتة على الترابيزة. عايز البسكوتة دي دلوقتي!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "warm",
+          "en": "Sam sees a cookie on the table.",
+          "ar": "سام شاف بسكوتة على الترابيزة.",
+          "audioEn": "/audio/sam-says-please/p2-s0-en.mp3",
+          "audioAr": "/audio/sam-says-please/p2-s0-ar.mp3"
+        },
+        {
+          "speaker": "sam",
+          "mood": "excited",
+          "en": "I want that cookie now!",
+          "ar": "عايز البسكوتة دي دلوقتي!",
+          "audioEn": "/audio/sam-says-please/p2-s1-en.mp3",
+          "audioAr": "/audio/sam-says-please/p2-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "image": "/stories/sam/page3.jpg",
+      "textEn": "Sam reaches without asking. Wait, Sam. Let's use kind words.",
+      "textAr": "سام مدّ إيده من غير ما يسأل. استنى يا سام. خلينا نقول كلام حلو.",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "gentle",
+          "en": "Sam reaches without asking.",
+          "ar": "سام مدّ إيده من غير ما يسأل.",
+          "audioEn": "/audio/sam-says-please/p3-s0-en.mp3",
+          "audioAr": "/audio/sam-says-please/p3-s0-ar.mp3"
+        },
+        {
+          "speaker": "mama",
+          "mood": "gentle",
+          "en": "Wait, Sam. Let's use kind words.",
+          "ar": "استنى يا سام. خلينا نقول كلام حلو.",
+          "audioEn": "/audio/sam-says-please/p3-s1-en.mp3",
+          "audioAr": "/audio/sam-says-please/p3-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "image": "/stories/sam/page4.jpg",
+      "textEn": "Can you say please? Please...? Yes! That sounds so kind.",
+      "textAr": "تقدر تقول: لو سمحت؟ لو سمحت…؟ براڤو! كده كلام جميل.",
+      "segments": [
+        {
+          "speaker": "mama",
+          "mood": "kind",
+          "en": "Can you say please?",
+          "ar": "تقدر تقول: لو سمحت؟",
+          "audioEn": "/audio/sam-says-please/p4-s0-en.mp3",
+          "audioAr": "/audio/sam-says-please/p4-s0-ar.mp3"
+        },
+        {
+          "speaker": "sam",
+          "mood": "curious",
+          "en": "Please...?",
+          "ar": "لو سمحت…؟",
+          "audioEn": "/audio/sam-says-please/p4-s1-en.mp3",
+          "audioAr": "/audio/sam-says-please/p4-s1-ar.mp3"
+        },
+        {
+          "speaker": "mama",
+          "mood": "proud",
+          "en": "Yes! That sounds so kind.",
+          "ar": "براڤو! كده كلام جميل.",
+          "audioEn": "/audio/sam-says-please/p4-s2-en.mp3",
+          "audioAr": "/audio/sam-says-please/p4-s2-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "image": "/stories/sam/page5.jpg",
+      "textEn": "Mama, may I have a cookie, please? Of course, my sweet Sam!",
+      "textAr": "ماما، ممكن بسكوتة لو سمحت؟ طبعًا يا حبيبي سام!",
+      "segments": [
+        {
+          "speaker": "sam",
+          "mood": "kind",
+          "en": "Mama, may I have a cookie, please?",
+          "ar": "ماما، ممكن بسكوتة لو سمحت؟",
+          "audioEn": "/audio/sam-says-please/p5-s0-en.mp3",
+          "audioAr": "/audio/sam-says-please/p5-s0-ar.mp3"
+        },
+        {
+          "speaker": "mama",
+          "mood": "happy",
+          "en": "Of course, my sweet Sam!",
+          "ar": "طبعًا يا حبيبي سام!",
+          "audioEn": "/audio/sam-says-please/p5-s1-en.mp3",
+          "audioAr": "/audio/sam-says-please/p5-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "image": "/stories/sam/page6.jpg",
+      "textEn": "Mama gives Sam the cookie. Thank you, Mama! You are very polite!",
+      "textAr": "ماما إدّت لسام البسكوتة. شكرًا يا ماما! إنت مؤدّب أوي!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "happy",
+          "en": "Mama gives Sam the cookie.",
+          "ar": "ماما إدّت لسام البسكوتة.",
+          "audioEn": "/audio/sam-says-please/p6-s0-en.mp3",
+          "audioAr": "/audio/sam-says-please/p6-s0-ar.mp3"
+        },
+        {
+          "speaker": "sam",
+          "mood": "excited",
+          "en": "Thank you, Mama!",
+          "ar": "شكرًا يا ماما!",
+          "audioEn": "/audio/sam-says-please/p6-s1-en.mp3",
+          "audioAr": "/audio/sam-says-please/p6-s1-ar.mp3"
+        },
+        {
+          "speaker": "mama",
+          "mood": "proud",
+          "en": "You are very polite!",
+          "ar": "إنت مؤدّب أوي!",
+          "audioEn": "/audio/sam-says-please/p6-s2-en.mp3",
+          "audioAr": "/audio/sam-says-please/p6-s2-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p7",
+      "image": "/stories/sam/page7.jpg",
+      "textEn": "Please and thank you make hearts happy. I can say the magic words! I am proud of you, Sam.",
+      "textAr": "لو سمحت وشكرًا بيفرحوا القلب. أقدر أقول الكلمات السحرية! فخورة بيك يا سام.",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "warm",
+          "en": "Please and thank you make hearts happy.",
+          "ar": "لو سمحت وشكرًا بيفرحوا القلب.",
+          "audioEn": "/audio/sam-says-please/p7-s0-en.mp3",
+          "audioAr": "/audio/sam-says-please/p7-s0-ar.mp3"
+        },
+        {
+          "speaker": "sam",
+          "mood": "happy",
+          "en": "I can say the magic words!",
+          "ar": "أقدر أقول الكلمات السحرية!",
+          "audioEn": "/audio/sam-says-please/p7-s1-en.mp3",
+          "audioAr": "/audio/sam-says-please/p7-s1-ar.mp3"
+        },
+        {
+          "speaker": "mama",
+          "mood": "kind",
+          "en": "I am proud of you, Sam.",
+          "ar": "فخورة بيك يا سام.",
+          "audioEn": "/audio/sam-says-please/p7-s2-en.mp3",
+          "audioAr": "/audio/sam-says-please/p7-s2-ar.mp3"
+        }
+      ]
+    }
+  ]
+}

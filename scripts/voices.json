@@ -1,0 +1,374 @@
+{
+  "pip-learns-to-share": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "pip": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+4%",
+        "pitch": "+18Hz",
+        "label": "Pip"
+      },
+      "mimi": {
+        "voice": "en-US-JennyNeural",
+        "rate": "+6%",
+        "pitch": "+22Hz",
+        "label": "Mimi"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "pip": {
+        "voice": "ar-EG-ShakirNeural",
+        "rate": "+6%",
+        "pitch": "+28Hz",
+        "label": "بيب"
+      },
+      "mimi": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "+10%",
+        "pitch": "+32Hz",
+        "label": "ميمي"
+      }
+    }
+  },
+  "luna-night-sky": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "luna": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+2%",
+        "pitch": "+16Hz",
+        "label": "Luna"
+      },
+      "star": {
+        "voice": "en-US-JennyNeural",
+        "rate": "-2%",
+        "pitch": "+12Hz",
+        "label": "Star"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "luna": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "+8%",
+        "pitch": "+30Hz",
+        "label": "لونا"
+      },
+      "star": {
+        "voice": "ar-EG-ShakirNeural",
+        "rate": "-4%",
+        "pitch": "+12Hz",
+        "label": "النجمة"
+      }
+    }
+  },
+  "sam-says-please": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "sam": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+6%",
+        "pitch": "+20Hz",
+        "label": "Sam"
+      },
+      "mama": {
+        "voice": "en-US-JennyNeural",
+        "rate": "-6%",
+        "pitch": "+2Hz",
+        "label": "Mama"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "sam": {
+        "voice": "ar-EG-ShakirNeural",
+        "rate": "+8%",
+        "pitch": "+30Hz",
+        "label": "سام"
+      },
+      "mama": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-6%",
+        "pitch": "+6Hz",
+        "label": "ماما"
+      }
+    }
+  },
+  "nour-names-feelings": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "nour": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+3%",
+        "pitch": "+18Hz",
+        "label": "Nour"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "nour": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "+8%",
+        "pitch": "+30Hz",
+        "label": "نور"
+      }
+    }
+  },
+  "zuzu-counts": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "zuzu": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+6%",
+        "pitch": "+20Hz",
+        "label": "Zuzu"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "zuzu": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "+10%",
+        "pitch": "+32Hz",
+        "label": "زوزو"
+      }
+    }
+  },
+  "riri-colors": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "riri": {
+        "voice": "en-US-JennyNeural",
+        "rate": "+8%",
+        "pitch": "+18Hz",
+        "label": "Riri"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "riri": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "+10%",
+        "pitch": "+30Hz",
+        "label": "ريري"
+      }
+    }
+  },
+  "tito-helps": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "tito": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+4%",
+        "pitch": "+16Hz",
+        "label": "Tito"
+      },
+      "titoMama": {
+        "voice": "en-US-JennyNeural",
+        "rate": "-6%",
+        "pitch": "+2Hz",
+        "label": "Mama"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "tito": {
+        "voice": "ar-EG-ShakirNeural",
+        "rate": "+6%",
+        "pitch": "+26Hz",
+        "label": "تيتو"
+      },
+      "titoMama": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-6%",
+        "pitch": "+6Hz",
+        "label": "ماما"
+      }
+    }
+  },
+  "brushy-teeth": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "brushy": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+5%",
+        "pitch": "+18Hz",
+        "label": "Brushy"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "brushy": {
+        "voice": "ar-EG-ShakirNeural",
+        "rate": "+8%",
+        "pitch": "+28Hz",
+        "label": "فرّوش"
+      }
+    }
+  },
+  "kiko-waits": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "kiko": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+6%",
+        "pitch": "+18Hz",
+        "label": "Kiko"
+      },
+      "friend": {
+        "voice": "en-US-JennyNeural",
+        "rate": "+2%",
+        "pitch": "+10Hz",
+        "label": "Friend"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "kiko": {
+        "voice": "ar-EG-ShakirNeural",
+        "rate": "+8%",
+        "pitch": "+28Hz",
+        "label": "كيكو"
+      },
+      "friend": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "+4%",
+        "pitch": "+18Hz",
+        "label": "الصاحب"
+      }
+    }
+  },
+  "lulu-says-sorry": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "rate": "-12%",
+        "pitch": "+0Hz",
+        "label": "Narrator"
+      },
+      "lulu": {
+        "voice": "en-US-AnaNeural",
+        "rate": "+4%",
+        "pitch": "+18Hz",
+        "label": "Lulu"
+      },
+      "ducky": {
+        "voice": "en-US-JennyNeural",
+        "rate": "+6%",
+        "pitch": "+16Hz",
+        "label": "Ducky"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "-10%",
+        "pitch": "+4Hz",
+        "label": "الراوي"
+      },
+      "lulu": {
+        "voice": "ar-EG-SalmaNeural",
+        "rate": "+8%",
+        "pitch": "+30Hz",
+        "label": "لولو"
+      },
+      "ducky": {
+        "voice": "ar-EG-ShakirNeural",
+        "rate": "+6%",
+        "pitch": "+22Hz",
+        "label": "بطوطة"
+      }
+    }
+  }
+}

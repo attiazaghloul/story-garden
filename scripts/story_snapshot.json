@@ -1,0 +1,236 @@
+{
+  "id": "pip-learns-to-share",
+  "pauseMs": 280,
+  "cast": {
+    "en": {
+      "narrator": {
+        "voice": "en-US-AriaNeural",
+        "label": "Narrator"
+      },
+      "pip": {
+        "voice": "en-US-AnaNeural",
+        "label": "Pip"
+      },
+      "mimi": {
+        "voice": "en-US-JennyNeural",
+        "label": "Mimi"
+      }
+    },
+    "ar": {
+      "narrator": {
+        "voice": "ar-EG-SalmaNeural",
+        "label": "الراوي"
+      },
+      "pip": {
+        "voice": "ar-EG-ShakirNeural",
+        "label": "بيب"
+      },
+      "mimi": {
+        "voice": "ar-EG-SalmaNeural",
+        "label": "ميمي"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "p1",
+      "image": "/stories/pip/page1.jpg",
+      "textEn": "Look! This is Pip. Pip is a little puppy.",
+      "textAr": "بصّوا يا حبايب… أهو بيب! بيب كلب صغير كيوت أوي، ووشّه باشوش.",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "warm",
+          "en": "Look! This is Pip.",
+          "ar": "بصّوا يا حبايب… أهو بيب!",
+          "audioEn": "/audio/pip-learns-to-share/p1-s0-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p1-s0-ar.mp3"
+        },
+        {
+          "speaker": "narrator",
+          "mood": "happy",
+          "en": "Pip is a little puppy.",
+          "ar": "بيب كلب صغير كيوت أوي، ووشّه باشوش.",
+          "audioEn": "/audio/pip-learns-to-share/p1-s1-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p1-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "image": "/stories/pip/page2.jpg",
+      "textEn": "Pip has so many toys. Yay! I love my toys!",
+      "textAr": "بيب عنده ألعاب كتير أوي في الأوضة. ياااي! بحب ألعابي موت!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "warm",
+          "en": "Pip has so many toys.",
+          "ar": "بيب عنده ألعاب كتير أوي في الأوضة.",
+          "audioEn": "/audio/pip-learns-to-share/p2-s0-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p2-s0-ar.mp3"
+        },
+        {
+          "speaker": "pip",
+          "mood": "excited",
+          "en": "Yay! I love my toys!",
+          "ar": "ياااي! بحب ألعابي موت!",
+          "audioEn": "/audio/pip-learns-to-share/p2-s1-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p2-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "image": "/stories/pip/page3.jpg",
+      "textEn": "Knock knock! Here comes Mimi the kitten. Hello, Pip! Can I play?",
+      "textAr": "فجأة… الباب اتفتح، وميمي القطة جت! أهلااا يا بيب! ألعب معاك؟",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "curious",
+          "en": "Knock knock! Here comes Mimi the kitten.",
+          "ar": "فجأة… الباب اتفتح، وميمي القطة جت!",
+          "audioEn": "/audio/pip-learns-to-share/p3-s0-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p3-s0-ar.mp3"
+        },
+        {
+          "speaker": "mimi",
+          "mood": "happy",
+          "en": "Hello, Pip! Can I play?",
+          "ar": "أهلااا يا بيب! ألعب معاك؟",
+          "audioEn": "/audio/pip-learns-to-share/p3-s1-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p3-s1-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "image": "/stories/pip/page4.jpg",
+      "textEn": "Pip holds his toys tight. These are mine... Oh... I just wanted a friend.",
+      "textAr": "بيب حضن ألعابه وقربها منه. دي بتاعتي أنا… طب أنا كنت عايزة ألعب معاك وبس…",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "gentle",
+          "en": "Pip holds his toys tight.",
+          "ar": "بيب حضن ألعابه وقربها منه.",
+          "audioEn": "/audio/pip-learns-to-share/p4-s0-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p4-s0-ar.mp3"
+        },
+        {
+          "speaker": "pip",
+          "mood": "sad",
+          "en": "These are mine...",
+          "ar": "دي بتاعتي أنا…",
+          "audioEn": "/audio/pip-learns-to-share/p4-s1-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p4-s1-ar.mp3"
+        },
+        {
+          "speaker": "mimi",
+          "mood": "sad",
+          "en": "Oh... I just wanted a friend.",
+          "ar": "طب أنا كنت عايزة ألعب معاك وبس…",
+          "audioEn": "/audio/pip-learns-to-share/p4-s2-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p4-s2-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "image": "/stories/pip/page5.jpg",
+      "textEn": "Then Pip thinks for a moment. Here, Mimi. Take the red ball! Thank you, Pip!",
+      "textAr": "بيب سكت شوية… وفكّر. خدي يا ميمي! اهي الكرة الحمرا. ياااي شكراً يا بيب!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "gentle",
+          "en": "Then Pip thinks for a moment.",
+          "ar": "بيب سكت شوية… وفكّر.",
+          "audioEn": "/audio/pip-learns-to-share/p5-s0-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p5-s0-ar.mp3"
+        },
+        {
+          "speaker": "pip",
+          "mood": "kind",
+          "en": "Here, Mimi. Take the red ball!",
+          "ar": "خدي يا ميمي! اهي الكرة الحمرا.",
+          "audioEn": "/audio/pip-learns-to-share/p5-s1-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p5-s1-ar.mp3"
+        },
+        {
+          "speaker": "mimi",
+          "mood": "happy",
+          "en": "Thank you, Pip!",
+          "ar": "ياااي شكراً يا بيب!",
+          "audioEn": "/audio/pip-learns-to-share/p5-s2-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p5-s2-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "image": "/stories/pip/page6.jpg",
+      "textEn": "They play and laugh together! This is so much fun! Best day ever!",
+      "textAr": "اللعب بقى حلو… والضحك ملى الأوضة! يا سلام! إحنا بنتفسّح أوي! أحلى يوم في حياتي!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "happy",
+          "en": "They play and laugh together!",
+          "ar": "اللعب بقى حلو… والضحك ملى الأوضة!",
+          "audioEn": "/audio/pip-learns-to-share/p6-s0-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p6-s0-ar.mp3"
+        },
+        {
+          "speaker": "pip",
+          "mood": "excited",
+          "en": "This is so much fun!",
+          "ar": "يا سلام! إحنا بنتفسّح أوي!",
+          "audioEn": "/audio/pip-learns-to-share/p6-s1-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p6-s1-ar.mp3"
+        },
+        {
+          "speaker": "mimi",
+          "mood": "excited",
+          "en": "Best day ever!",
+          "ar": "أحلى يوم في حياتي!",
+          "audioEn": "/audio/pip-learns-to-share/p6-s2-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p6-s2-ar.mp3"
+        }
+      ]
+    },
+    {
+      "id": "p7",
+      "image": "/stories/pip/page7.jpg",
+      "textEn": "Sharing makes friends happy. Yay! Friends forever! Yay, Pip!",
+      "textAr": "شوفوا بقى… المشاركة بتحلّي الصداقة. ياااي! إحنا أصحاب على طول! برافو يا بيب!",
+      "segments": [
+        {
+          "speaker": "narrator",
+          "mood": "warm",
+          "en": "Sharing makes friends happy.",
+          "ar": "شوفوا بقى… المشاركة بتحلّي الصداقة.",
+          "audioEn": "/audio/pip-learns-to-share/p7-s0-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p7-s0-ar.mp3"
+        },
+        {
+          "speaker": "pip",
+          "mood": "excited",
+          "en": "Yay! Friends forever!",
+          "ar": "ياااي! إحنا أصحاب على طول!",
+          "audioEn": "/audio/pip-learns-to-share/p7-s1-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p7-s1-ar.mp3"
+        },
+        {
+          "speaker": "mimi",
+          "mood": "happy",
+          "en": "Yay, Pip!",
+          "ar": "برافو يا بيب!",
+          "audioEn": "/audio/pip-learns-to-share/p7-s2-en.mp3",
+          "audioAr": "/audio/pip-learns-to-share/p7-s2-ar.mp3"
+        }
+      ]
+    }
+  ]
+}
