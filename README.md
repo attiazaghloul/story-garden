@@ -96,3 +96,20 @@ python scripts/generate_audio.py --only pip-learns-to-share
 ## التقنيات
 
 React 19 · TypeScript · Vite · vite-plugin-pwa (Workbox)
+
+## Native Android app
+
+The `android/` project is a Capacitor wrapper with all web, story, image, and
+audio assets bundled into the APK. It uses Android System WebView and does not
+open or require Chrome.
+
+Requirements: JDK 21 and Android SDK Platform/Build Tools 35.
+
+```bash
+npm run android:sync
+cd android
+./gradlew assembleRelease
+```
+
+The installable release is copied to `public/StoryGarden.apk` for the website's
+download button.

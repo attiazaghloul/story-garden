@@ -1,3 +1,4 @@
+import { Capacitor } from '@capacitor/core'
 import { useEffect, useState } from 'react'
 import { asset } from '../data/stories'
 
@@ -18,12 +19,13 @@ const isStandalone = () =>
 type Fallback = 'none' | 'ios' | 'manual'
 
 export function InstallButton() {
+  const isNative = Capacitor.isNativePlatform()
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null)
   const [installed, setInstalled] = useState(isStandalone)
   const [fallback, setFallback] = useState<Fallback>('none')
 
   useEffect(() => {
-    if (isStandalone()) return
+    if (isNative || isStandalone()) return
 
     const onPrompt = (e: Event) => {
       e.preventDefault() // keep Chrome's own banner from firing; we show our button
@@ -57,9 +59,9 @@ export function InstallButton() {
       window.removeEventListener('beforeinstallprompt', onPrompt)
       window.removeEventListener('appinstalled', onInstalled)
     }
-  }, [])
+  }, [isNative])
 
-  if (installed) return null
+  if (isNative || installed) return null
 
   if (deferred) {
     return (
