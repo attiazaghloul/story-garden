@@ -46,6 +46,12 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg}'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallback: `${BASE}index.html`,
+        // Without these a new deploy only shows up on the visit *after* next:
+        // the old worker keeps serving its cached shell. Take over right away
+        // and drop the previous precache.
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true,
         runtimeCaching: [
           {
             urlPattern: ({ url }) => url.pathname.includes('/audio/'),
