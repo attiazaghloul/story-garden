@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Home } from './components/Home'
 import { LanguagePick } from './components/LanguagePick'
 import { StoryReader } from './components/StoryReader'
+import { ARABIC_ENABLED } from './config'
 import { getStoryById, stories, type StoryLang } from './data/stories'
 import './App.css'
 
@@ -19,16 +20,16 @@ export default function App() {
       return (
         <div className="app-shell">
           <main className="app-main">
-            <p className="empty-state">القصة دي لسه مش جاهزة.</p>
+            <p className="empty-state">This story is not ready yet.</p>
             <button type="button" className="btn btn-primary" onClick={() => setView({ name: 'home' })}>
-              رجوع
+              Back
             </button>
           </main>
         </div>
       )
     }
 
-    if (view.name === 'lang') {
+    if (view.name === 'lang' && ARABIC_ENABLED) {
       return (
         <div className="app-shell">
           <main className="app-main">
@@ -47,9 +48,10 @@ export default function App() {
         <main className="app-main">
           <StoryReader
             story={story}
-            lang={view.lang}
+            lang={view.name === 'story' ? view.lang : 'en'}
             onBack={() => setView({ name: 'home' })}
             onChangeLang={() => setView({ name: 'lang', storyId: story.id })}
+            showLanguageSwitcher={ARABIC_ENABLED}
           />
         </main>
       </div>
@@ -61,11 +63,13 @@ export default function App() {
       <main className="app-main">
         <Home
           stories={stories}
-          onOpenStory={(storyId) => setView({ name: 'lang', storyId })}
+          onOpenStory={(storyId) =>
+            setView(ARABIC_ENABLED ? { name: 'lang', storyId } : { name: 'story', storyId, lang: 'en' })
+          }
         />
       </main>
       <footer className="app-footer">
-        <span>Story Garden · عربي مصري أو إنجليزي أمريكي — مش الاتنين مع بعض</span>
+        <span>Story Garden · Gentle educational stories for little readers</span>
       </footer>
     </div>
   )

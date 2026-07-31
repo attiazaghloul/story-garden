@@ -10,9 +10,16 @@ type StoryReaderProps = {
   lang: StoryLang
   onBack: () => void
   onChangeLang: () => void
+  showLanguageSwitcher?: boolean
 }
 
-export function StoryReader({ story, lang, onBack, onChangeLang }: StoryReaderProps) {
+export function StoryReader({
+  story,
+  lang,
+  onBack,
+  onChangeLang,
+  showLanguageSwitcher = true,
+}: StoryReaderProps) {
   const [pageIndex, setPageIndex] = useState(0)
   const [autoPlay, setAutoPlay] = useState(false)
   const [activeWord, setActiveWord] = useState<string | undefined>()
@@ -119,11 +126,13 @@ export function StoryReader({ story, lang, onBack, onChangeLang }: StoryReaderPr
               : 'Different character voices · tap any word'}
           </span>
         </div>
-        <div className="reader-top-actions">
-          <button type="button" className="chip is-on" onClick={onChangeLang}>
-            {isAr ? '🇺🇸 English' : '🇪🇬 عربي'}
-          </button>
-        </div>
+        {showLanguageSwitcher && (
+          <div className="reader-top-actions">
+            <button type="button" className="chip is-on" onClick={onChangeLang}>
+              {isAr ? '🇺🇸 English' : '🇪🇬 عربي'}
+            </button>
+          </div>
+        )}
       </header>
 
       <div className="progress-track" aria-hidden>
@@ -322,9 +331,11 @@ export function StoryReader({ story, lang, onBack, onChangeLang }: StoryReaderPr
             >
               {isAr ? 'من الأول تاني' : 'Start over'}
             </button>
-            <button type="button" className="btn btn-secondary" onClick={onChangeLang}>
-              {isAr ? '🇺🇸 احكيها بالإنجليزي' : '🇪🇬 احكيها بالعربي'}
-            </button>
+            {showLanguageSwitcher && (
+              <button type="button" className="btn btn-secondary" onClick={onChangeLang}>
+                {isAr ? '🇺🇸 احكيها بالإنجليزي' : '🇪🇬 احكيها بالعربي'}
+              </button>
+            )}
             <button type="button" className="btn btn-primary" onClick={onBack}>
               {isAr ? 'رجوع للمكتبة' : 'Back to library'}
             </button>

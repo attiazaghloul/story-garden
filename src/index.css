@@ -8,7 +8,7 @@
   --shadow-soft: 0 8px 20px rgba(15, 23, 42, 0.06);
   --shadow-card: 0 14px 34px rgba(15, 23, 42, 0.08);
   --font-display: 'Nunito', 'Cairo', system-ui, sans-serif;
-  --font-ui: 'Cairo', 'Nunito', system-ui, sans-serif;
+  --font-ui: 'Nunito', 'Cairo', system-ui, sans-serif;
   font-family: var(--font-ui);
   line-height: 1.5;
   font-weight: 600;
@@ -27,7 +27,7 @@
 }
 
 html {
-  direction: rtl;
+  direction: ltr;
 }
 
 html,
@@ -51,7 +51,7 @@ img {
   max-width: 100%;
 }
 
-/* English story text should stay LTR even in RTL UI */
+/* Keep English text isolated if Arabic is enabled again later. */
 .story-english,
 .hero-title-en,
 .story-card-title small,

@@ -41,6 +41,12 @@ SETTINGS = {
     "speed": SPEED,
 }
 
+# Standalone "I" can be interpreted as the Roman numeral one by TTS models.
+# The homophone keeps the clip sounding correct while removing that ambiguity.
+PRONUNCIATION_HINTS = {
+    "i": "eye",
+}
+
 
 def synthesize(text: str, retries: int = 2) -> bytes:
     body = json.dumps({"text": text, "model_id": MODEL, "voice_settings": SETTINGS}).encode("utf-8")
@@ -81,7 +87,7 @@ def main() -> None:
         out = WORDS_DIR / "en" / filename
         if args.skip_existing and out.exists() and out.stat().st_size > 800:
             continue
-        data = synthesize(word)
+        data = synthesize(PRONUNCIATION_HINTS.get(word, word))
         out.write_bytes(data)
         made += 1
         total_chars += len(word)

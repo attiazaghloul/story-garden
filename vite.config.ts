@@ -15,12 +15,12 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons/apple-touch-icon.png'],
       manifest: {
-        name: 'Story Garden · حديقة القصص',
+        name: 'Story Garden',
         short_name: 'Story Garden',
         description:
-          'قصص أطفال تعليمية لسن ٤–٦ سنين — عربي مصري أو إنجليزي أمريكي، بأصوات ومشاعر.',
-        lang: 'ar',
-        dir: 'rtl',
+          'Gentle educational stories for children ages 4–6, with expressive voices and tappable words.',
+        lang: 'en',
+        dir: 'ltr',
         id: BASE,
         start_url: BASE,
         scope: BASE,
@@ -54,10 +54,20 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
         runtimeCaching: [
           {
-            urlPattern: ({ url }) => url.pathname.includes('/audio/'),
+            urlPattern: ({ url }) => url.pathname.endsWith('/audio/words/manifest.json'),
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'story-word-manifest-v2',
+              networkTimeoutSeconds: 4,
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: ({ url }) =>
+              url.pathname.includes('/audio/') && !url.pathname.endsWith('/manifest.json'),
             handler: 'CacheFirst',
             options: {
-              cacheName: 'story-audio',
+              cacheName: 'story-audio-v2',
               expiration: { maxEntries: 600, maxAgeSeconds: 60 * 60 * 24 * 365 },
               cacheableResponse: { statuses: [0, 200] },
               rangeRequests: true,

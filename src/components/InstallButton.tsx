@@ -73,7 +73,7 @@ export function InstallButton() {
           setDeferred(null)
         }}
       >
-        <span aria-hidden>⬇️</span> ثبّت التطبيق على الجهاز
+        <span aria-hidden>⬇️</span> Install Story Garden
       </button>
     )
   }
@@ -81,8 +81,8 @@ export function InstallButton() {
   if (fallback === 'ios') {
     return (
       <p className="install-hint">
-        📲 عشان تحطّه على الشاشة: اضغط زرار <strong>المشاركة</strong> تحت، واختار{' '}
-        <strong>«إضافة إلى الشاشة الرئيسية»</strong>
+        📲 To add it to your Home Screen, tap <strong>Share</strong>, then choose{' '}
+        <strong>Add to Home Screen</strong>.
       </p>
     )
   }
@@ -91,15 +91,15 @@ export function InstallButton() {
     return (
       <div className="install-hint">
         <p style={{ margin: 0 }}>
-          📲 عشان تحطّه على الشاشة الرئيسية: افتح قائمة كروم <strong>⋮</strong> فوق، واختار{' '}
-          <strong>«إضافة إلى الشاشة الرئيسية»</strong>
+          📲 Open Chrome's <strong>⋮</strong> menu and choose{' '}
+          <strong>Add to Home screen</strong>.
         </p>
         <p className="install-note">
-          لو الخيار مش موجود، غالبًا الجهاز على <strong>حساب أطفال</strong> بيمنع تثبيت
-          التطبيقات — نزّل نسخة الأندرويد من تحت، وسطّبها من حساب ولي الأمر.
+          If that option is missing, a <strong>supervised child account</strong> may be blocking
+          installs. Download the Android version below and install it from the parent account.
         </p>
         <a className="apk-link" href={asset('StoryGarden.apk')} download>
-          <span aria-hidden>📦</span> نزّل تطبيق أندرويد (APK)
+          <span aria-hidden>📦</span> Download Android app (APK)
         </a>
       </div>
     )
