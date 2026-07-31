@@ -137,6 +137,13 @@
   box-shadow: var(--shadow-soft);
 }
 
+.install-note {
+  margin: 0.55rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .section-head {
   text-align: center;
   margin-bottom: 1.25rem;

@@ -14,10 +14,12 @@ const isStandalone = () =>
   // iOS Safari reports installed state here instead
   (navigator as unknown as { standalone?: boolean }).standalone === true
 
+type Fallback = 'none' | 'ios' | 'manual'
+
 export function InstallButton() {
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null)
   const [installed, setInstalled] = useState(isStandalone)
-  const [showIosHelp, setShowIosHelp] = useState(false)
+  const [fallback, setFallback] = useState<Fallback>('none')
 
   useEffect(() => {
     if (isStandalone()) return
@@ -25,6 +27,7 @@ export function InstallButton() {
     const onPrompt = (e: Event) => {
       e.preventDefault() // keep Chrome's own banner from firing; we show our button
       setDeferred(e as BeforeInstallPromptEvent)
+      setFallback('none')
     }
     const onInstalled = () => {
       setInstalled(true)
@@ -34,13 +37,22 @@ export function InstallButton() {
     window.addEventListener('beforeinstallprompt', onPrompt)
     window.addEventListener('appinstalled', onInstalled)
 
-    // iOS/iPadOS never fires beforeinstallprompt — offer manual steps instead.
+    // iOS/iPadOS never fires beforeinstallprompt at all.
     const ua = navigator.userAgent
     const isIos = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)
     const isSafari = /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|Chrome/.test(ua)
-    if (isIos && isSafari) setShowIosHelp(true)
+
+    // Chrome also stays silent when installing is blocked — most often on a
+    // supervised/child account. Show manual steps rather than nothing.
+    const t = window.setTimeout(() => {
+      setDeferred((current) => {
+        if (!current) setFallback(isIos && isSafari ? 'ios' : 'manual')
+        return current
+      })
+    }, 3500)
 
     return () => {
+      window.clearTimeout(t)
       window.removeEventListener('beforeinstallprompt', onPrompt)
       window.removeEventListener('appinstalled', onInstalled)
     }
@@ -65,12 +77,28 @@ export function InstallButton() {
     )
   }
 
-  if (showIosHelp) {
+  if (fallback === 'ios') {
     return (
       <p className="install-hint">
-        📲 عشان تثبّت التطبيق: اضغط زرار المشاركة <strong>􀈂</strong> تحت، واختار{' '}
+        📲 عشان تحطّه على الشاشة: اضغط زرار <strong>المشاركة</strong> تحت، واختار{' '}
         <strong>«إضافة إلى الشاشة الرئيسية»</strong>
       </p>
+    )
+  }
+
+  if (fallback === 'manual') {
+    return (
+      <div className="install-hint">
+        <p style={{ margin: 0 }}>
+          📲 عشان تحطّه على الشاشة الرئيسية: افتح قائمة كروم <strong>⋮</strong> فوق، واختار{' '}
+          <strong>«إضافة إلى الشاشة الرئيسية»</strong>
+        </p>
+        <p className="install-note">
+          لو الخيار مش موجود، غالبًا الجهاز على <strong>حساب أطفال</strong> بيمنع تثبيت
+          التطبيقات. التطبيق هيشتغل عادي من المتصفح — والقصص اللي فتحتها هتشتغل من غير نت
+          برضه.
+        </p>
+      </div>
     )
   }
 
