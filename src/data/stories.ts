@@ -30,6 +30,26 @@ export type StoryPage = {
   segments: StorySegment[]
 }
 
+/**
+ * One end-of-story comprehension choice. `image` questions show story pages the
+ * child already saw; `word` questions show a big emoji plus a word that always
+ * has bundled pronunciation audio, so nothing here needs reading skills alone.
+ */
+export type QuizOption = {
+  /** Resolved page image (image questions) */
+  image?: string
+  word?: string
+  emoji?: string
+  correct?: boolean
+}
+
+export type QuizQuestion = {
+  type: 'image' | 'word'
+  en: string
+  ar: string
+  options: QuizOption[]
+}
+
 export type Story = {
   id: string
   title: string
@@ -46,6 +66,7 @@ export type Story = {
   learningGoals: string[]
   learningGoalsAr: string[]
   cast: SpeakerId[]
+  quiz: QuizQuestion[]
   pages: StoryPage[]
   locked?: boolean
 }
@@ -81,7 +102,9 @@ export const SPEAKER_META: Record<
  */
 type RawSegment = { speaker: SpeakerId; mood: MoodId; en: string; ar: string }
 type RawPage = { id: string; image: string; segments: RawSegment[] }
-type RawStory = Omit<Story, 'pages'> & { pages: RawPage[] }
+type RawQuizOption = { page?: string; word?: string; emoji?: string; correct?: boolean }
+type RawQuizQuestion = { type: 'image' | 'word'; en: string; ar: string; options: RawQuizOption[] }
+type RawStory = Omit<Story, 'pages' | 'quiz'> & { pages: RawPage[]; quiz?: RawQuizQuestion[] }
 
 /**
  * Resolve a public-folder path against the deploy base. The app is served from
@@ -111,10 +134,27 @@ function page(storyId: string, raw: RawPage): StoryPage {
   }
 }
 
+/** Quiz options point at page ids; resolve them to real image URLs once here. */
+function quiz(raw: RawStory): QuizQuestion[] {
+  const imageByPageId = new Map(raw.pages.map((p) => [p.id, asset(p.image)]))
+  return (raw.quiz ?? []).map((q) => ({
+    type: q.type,
+    en: q.en,
+    ar: q.ar,
+    options: q.options.map((o) => ({
+      image: o.page ? imageByPageId.get(o.page) : undefined,
+      word: o.word,
+      emoji: o.emoji,
+      correct: o.correct,
+    })),
+  }))
+}
+
 function buildStory(raw: RawStory): Story {
   return {
     ...raw,
     coverImage: asset(raw.coverImage),
+    quiz: quiz(raw),
     pages: raw.pages.map((p) => page(raw.id, p)),
   }
 }

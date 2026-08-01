@@ -26,6 +26,45 @@
       "pip",
       "mimi"
     ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows Pip sharing the red ball?",
+        "ar": "أنهي صورة فيها بيب بيدّي الكورة الحمرا لميمي؟",
+        "options": [
+          {
+            "page": "p5",
+            "correct": true
+          },
+          {
+            "page": "p4"
+          },
+          {
+            "page": "p1"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "What makes friends happy?",
+        "ar": "إيه اللي بيفرّح الأصحاب؟",
+        "options": [
+          {
+            "word": "sharing",
+            "emoji": "🤝",
+            "correct": true
+          },
+          {
+            "word": "mine",
+            "emoji": "✊"
+          },
+          {
+            "word": "no",
+            "emoji": "🙅"
+          }
+        ]
+      }
+    ],
     "pages": [
       {
         "id": "p1",
@@ -206,6 +245,45 @@
       "luna",
       "star"
     ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows Luna meeting the friendly star?",
+        "ar": "أنهي صورة فيها لونا قابلت النجمة الطيبة؟",
+        "options": [
+          {
+            "page": "p4",
+            "correct": true
+          },
+          {
+            "page": "p1"
+          },
+          {
+            "page": "p3"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "How does Luna feel at the end?",
+        "ar": "لونا حاسّة بإيه في الآخر؟",
+        "options": [
+          {
+            "word": "calm",
+            "emoji": "😌",
+            "correct": true
+          },
+          {
+            "word": "scared",
+            "emoji": "😨"
+          },
+          {
+            "word": "angry",
+            "emoji": "😠"
+          }
+        ]
+      }
+    ],
     "pages": [
       {
         "id": "p1",
@@ -373,6 +451,45 @@
       "narrator",
       "sam",
       "mama"
+    ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows Mama giving Sam the cookie?",
+        "ar": "أنهي صورة فيها ماما بتدّي سام البسكوتة؟",
+        "options": [
+          {
+            "page": "p6",
+            "correct": true
+          },
+          {
+            "page": "p2"
+          },
+          {
+            "page": "p3"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "What do we say when we ask for something?",
+        "ar": "بنقول إيه لما نطلب حاجة؟",
+        "options": [
+          {
+            "word": "please",
+            "emoji": "🙏",
+            "correct": true
+          },
+          {
+            "word": "no",
+            "emoji": "🙅"
+          },
+          {
+            "word": "mine",
+            "emoji": "✊"
+          }
+        ]
+      }
     ],
     "pages": [
       {
@@ -547,6 +664,45 @@
       "narrator",
       "nour"
     ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows Nour feeling angry?",
+        "ar": "أنهي صورة فيها نور حاسة بغضب؟",
+        "options": [
+          {
+            "page": "p3",
+            "correct": true
+          },
+          {
+            "page": "p2"
+          },
+          {
+            "page": "p4"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "How do you feel after a slow breath?",
+        "ar": "بتحس بإيه بعد نفس بطيء؟",
+        "options": [
+          {
+            "word": "calm",
+            "emoji": "😌",
+            "correct": true
+          },
+          {
+            "word": "angry",
+            "emoji": "😠"
+          },
+          {
+            "word": "sad",
+            "emoji": "😢"
+          }
+        ]
+      }
+    ],
     "pages": [
       {
         "id": "p1",
@@ -683,6 +839,45 @@
     "cast": [
       "narrator",
       "zuzu"
+    ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows five blocks?",
+        "ar": "أنهي صورة فيها خمس مكعبات؟",
+        "options": [
+          {
+            "page": "p4",
+            "correct": true
+          },
+          {
+            "page": "p2"
+          },
+          {
+            "page": "p3"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "What comes after three?",
+        "ar": "إيه اللي بييجي بعد تلاتة؟",
+        "options": [
+          {
+            "word": "four",
+            "emoji": "4️⃣",
+            "correct": true
+          },
+          {
+            "word": "one",
+            "emoji": "1️⃣"
+          },
+          {
+            "word": "five",
+            "emoji": "5️⃣"
+          }
+        ]
+      }
     ],
     "pages": [
       {
@@ -821,6 +1016,45 @@
       "narrator",
       "riri"
     ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows the big rainbow?",
+        "ar": "أنهي صورة فيها قوس قزح الكبير؟",
+        "options": [
+          {
+            "page": "p5",
+            "correct": true
+          },
+          {
+            "page": "p2"
+          },
+          {
+            "page": "p4"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "What color is the sun in the story?",
+        "ar": "الشمس لونها إيه في القصة؟",
+        "options": [
+          {
+            "word": "yellow",
+            "emoji": "🌞",
+            "correct": true
+          },
+          {
+            "word": "blue",
+            "emoji": "💙"
+          },
+          {
+            "word": "green",
+            "emoji": "💚"
+          }
+        ]
+      }
+    ],
     "pages": [
       {
         "id": "p1",
@@ -958,6 +1192,45 @@
       "narrator",
       "tito",
       "titoMama"
+    ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows Tito watering the plants?",
+        "ar": "أنهي صورة فيها تيتو بيسقي الزرع؟",
+        "options": [
+          {
+            "page": "p3",
+            "correct": true
+          },
+          {
+            "page": "p2"
+          },
+          {
+            "page": "p4"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "What does Tito do at home?",
+        "ar": "تيتو بيعمل إيه في البيت؟",
+        "options": [
+          {
+            "word": "helps",
+            "emoji": "🧹",
+            "correct": true
+          },
+          {
+            "word": "sleeps",
+            "emoji": "😴"
+          },
+          {
+            "word": "laugh",
+            "emoji": "😂"
+          }
+        ]
+      }
     ],
     "pages": [
       {
@@ -1102,6 +1375,45 @@
       "narrator",
       "brushy"
     ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows Brushy's bright, clean smile?",
+        "ar": "أنهي صورة فيها ابتسامة فرّوش النضيفة؟",
+        "options": [
+          {
+            "page": "p5",
+            "correct": true
+          },
+          {
+            "page": "p2"
+          },
+          {
+            "page": "p3"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "What do we clean with a brush?",
+        "ar": "بننضّف إيه بالفرشة؟",
+        "options": [
+          {
+            "word": "teeth",
+            "emoji": "🦷",
+            "correct": true
+          },
+          {
+            "word": "toys",
+            "emoji": "🧸"
+          },
+          {
+            "word": "blocks",
+            "emoji": "🧱"
+          }
+        ]
+      }
+    ],
     "pages": [
       {
         "id": "p1",
@@ -1240,6 +1552,45 @@
       "kiko",
       "friend"
     ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows Kiko waiting for his turn?",
+        "ar": "أنهي صورة فيها كيكو مستني دوره؟",
+        "options": [
+          {
+            "page": "p4",
+            "correct": true
+          },
+          {
+            "page": "p1"
+          },
+          {
+            "page": "p5"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "What makes play fair for everyone?",
+        "ar": "إيه اللي بيخلي اللعب عادل للكل؟",
+        "options": [
+          {
+            "word": "waiting",
+            "emoji": "⏳",
+            "correct": true
+          },
+          {
+            "word": "angry",
+            "emoji": "😠"
+          },
+          {
+            "word": "mine",
+            "emoji": "✊"
+          }
+        ]
+      }
+    ],
     "pages": [
       {
         "id": "p1",
@@ -1377,6 +1728,45 @@
       "narrator",
       "lulu",
       "ducky"
+    ],
+    "quiz": [
+      {
+        "type": "image",
+        "en": "Which picture shows the friends building the tower again?",
+        "ar": "أنهي صورة فيها الأصحاب بيبنوا البرج تاني؟",
+        "options": [
+          {
+            "page": "p4",
+            "correct": true
+          },
+          {
+            "page": "p2"
+          },
+          {
+            "page": "p1"
+          }
+        ]
+      },
+      {
+        "type": "word",
+        "en": "What do we say when we hurt a friend?",
+        "ar": "بنقول إيه لما نزعّل صاحبنا؟",
+        "options": [
+          {
+            "word": "sorry",
+            "emoji": "💛",
+            "correct": true
+          },
+          {
+            "word": "yay",
+            "emoji": "🎉"
+          },
+          {
+            "word": "mine",
+            "emoji": "✊"
+          }
+        ]
+      }
     ],
     "pages": [
       {

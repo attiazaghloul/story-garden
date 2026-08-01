@@ -1,7 +1,13 @@
+/*
+ * Tablet-first shell: the app owns exactly one viewport and never grows past
+ * it. Only the inner regions scroll, so a child can never "lose" the page by
+ * scrolling the whole document away.
+ */
 .app-shell {
-  min-height: 100svh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background:
     radial-gradient(1200px 600px at 10% -10%, rgba(255, 214, 165, 0.55), transparent 55%),
     radial-gradient(900px 500px at 100% 0%, rgba(186, 230, 253, 0.55), transparent 50%),
@@ -11,23 +17,40 @@
 }
 
 .app-main {
-  width: min(1120px, calc(100% - 2rem));
+  width: min(1200px, 100%);
   margin: 0 auto;
-  padding: 1.25rem 0 3rem;
+  padding: 1rem 1rem 1.5rem;
   flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* The reader is a fixed frame — nothing about it scrolls except the text. */
+.app-shell.is-reader .app-main {
+  overflow: hidden;
+  padding: 0.6rem 0.8rem 0.55rem;
+  padding-left: max(0.8rem, env(safe-area-inset-left));
+  padding-right: max(0.8rem, env(safe-area-inset-right));
+  padding-bottom: max(0.55rem, env(safe-area-inset-bottom));
 }
 
 .app-footer {
+  flex: none;
   text-align: center;
-  padding: 1rem;
+  padding: 0.6rem 1rem;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
-/* —— Home —— */
+/* —— Home ——
+ * Kept deliberately short so the first row of stories is visible without
+ * scrolling on a tablet.
+ */
 .hero {
   text-align: center;
-  padding: 1.5rem 0.5rem 2rem;
+  padding: 0.25rem 0.5rem 1.1rem;
 }
 
 .hero-badge {
@@ -46,7 +69,7 @@
 }
 
 .hero-title {
-  margin: 1rem 0 0.75rem;
+  margin: 0.5rem 0 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -55,7 +78,7 @@
 
 .hero-title-en {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-size: clamp(1.9rem, 4.6vw, 2.7rem);
   font-weight: 800;
   background: linear-gradient(120deg, #f59e0b, #ec4899 45%, #8b5cf6);
   -webkit-background-clip: text;
@@ -70,31 +93,11 @@
 }
 
 .hero-lead {
-  max-width: 40rem;
+  max-width: 38rem;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.hero-pills {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-  margin: 1.25rem 0 0;
-  padding: 0;
-}
-
-.hero-pills li {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  padding: 0.55rem 0.95rem;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.92rem;
-  box-shadow: var(--shadow-soft);
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
 /* Shown only while the browser reports the app is installable. */
@@ -102,7 +105,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 1.4rem auto 0;
+  margin: 1rem auto 0;
   padding: 0.85rem 1.6rem;
   border: none;
   border-radius: 999px;
@@ -161,12 +164,12 @@
 
 .section-head {
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
 }
 
 .section-head h2 {
   margin: 0;
-  font-size: 1.55rem;
+  font-size: 1.35rem;
   font-weight: 800;
 }
 
@@ -175,12 +178,55 @@
   color: var(--muted);
 }
 
-.story-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.25rem;
+/* —— Garden progress —— */
+.garden-progress {
+  max-width: 26rem;
+  margin: 1.1rem auto 0;
+  padding: 0.6rem 0.9rem 0.7rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-soft);
 }
 
+.garden-progress-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.45rem;
+  font-weight: 800;
+  font-size: 0.92rem;
+}
+
+.garden-progress-stars {
+  color: #b45309;
+}
+
+.garden-progress-track {
+  height: 0.6rem;
+  border-radius: 999px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+.garden-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #34d399, #fbbf24, #f472b6);
+  transition: width 0.4s ease;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.1rem;
+}
+
+/*
+ * The whole card is the control — no separate "Read" button. Tapping anywhere
+ * (or Enter/Space when focused) opens the story.
+ */
 .story-card {
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.95);
@@ -190,11 +236,30 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.story-card.is-open {
+  cursor: pointer;
 }
 
 .story-card.is-open:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(99, 102, 241, 0.16);
+}
+
+.story-card.is-open:active {
+  transform: scale(0.985);
+}
+
+.story-card.is-open:focus-visible {
+  outline: 3px solid #a78bfa;
+  outline-offset: 3px;
+}
+
+.story-card.is-finished {
+  border-color: #86efac;
+  box-shadow: 0 0 0 2px rgba(134, 239, 172, 0.5), var(--shadow-card);
 }
 
 .story-card.is-locked {
@@ -203,7 +268,7 @@
 
 .story-card-cover-wrap {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: #fde68a;
 }
@@ -220,7 +285,8 @@
 }
 
 .lock-badge,
-.new-badge {
+.new-badge,
+.done-badge {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -241,6 +307,14 @@
   color: #6d28d9;
 }
 
+.done-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #047857;
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+}
+
 .story-card-num {
   position: absolute;
   bottom: 0.65rem;
@@ -252,10 +326,10 @@
 }
 
 .story-card-body {
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 0.75rem 0.9rem 0.9rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
   flex: 1;
 }
 
@@ -274,41 +348,27 @@
 }
 
 .story-card-title span {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
 }
 
-.story-card-title small {
-  font-size: 0.92rem;
-  color: var(--muted);
-  font-weight: 600;
-}
-
 .story-card-goal {
-  margin: 0.25rem 0 0;
-  padding: 0.45rem 0.65rem;
+  margin: 0.15rem 0 0;
+  padding: 0.4rem 0.6rem;
   border-radius: 0.75rem;
   background: linear-gradient(135deg, #ecfdf5, #eff6ff);
   border: 1px solid #bbf7d0;
   color: #065f46;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  line-height: 1.45;
-}
-
-.story-card-sub {
-  margin: 0.15rem 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.5;
-  flex: 1;
+  line-height: 1.4;
 }
 
 .story-card-meta {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin: 0.4rem 0 0.75rem;
+  margin: 0.3rem 0 0.55rem;
   font-size: 0.8rem;
   font-weight: 700;
   color: #64748b;
@@ -320,12 +380,96 @@
   border-radius: 999px;
 }
 
-.story-card-btn {
-  width: 100%;
+/* Looks like a call to action, but the tap target is the whole card. */
+.story-card-cta {
+  margin: auto 0 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+  background: linear-gradient(135deg, #f59e0b, #f97316 40%, #ec4899);
+  box-shadow: 0 8px 18px rgba(249, 115, 22, 0.24);
+}
+
+.story-card-cta.is-continue {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.24);
+}
+
+.story-card.is-locked .story-card-cta {
+  color: #6d28d9;
+  background: #ede9fe;
+  box-shadow: none;
+}
+
+/* —— Word basket —— */
+.word-basket {
+  margin-top: 2rem;
+  padding: 1.1rem 1.25rem 1.25rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-soft);
+}
+
+.word-basket-head h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.word-basket-head p {
+  margin: 0.2rem 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.word-basket-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.basket-word {
+  appearance: none;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #334155;
+  cursor: pointer;
+  min-height: 2.6rem;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.basket-word:not(:disabled):hover {
+  border-color: #c4b5fd;
+  background: #f5f3ff;
+}
+
+.basket-word:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.basket-word.is-saying {
+  background: linear-gradient(135deg, #fde68a, #fbcfe8);
+  border-color: #f9a8d4;
+  transform: scale(1.05);
+}
+
+.reset-btn {
+  margin-top: 0.9rem;
+  font-size: 0.88rem;
+  padding: 0.5rem 1rem;
 }
 
 .parent-note {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   padding: 1.25rem 1.4rem;
   border-radius: 1.25rem;
   background: rgba(255, 255, 255, 0.72);
@@ -400,30 +544,26 @@
   animation: pulse-soft 1.4s ease-in-out infinite;
 }
 
-.btn-nav {
-  min-width: 6.5rem;
-  background: white;
-  color: var(--ink);
-  border: 1px solid #e2e8f0;
-}
-
-/* —— Reader —— */
+/* —— Reader ——
+ * Four fixed bands stacked inside one viewport: title bar, progress bar, the
+ * stage (the only flexible row), and the page navigation.
+ */
 .reader {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: 0.5rem;
 }
 
 .reader-top {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  gap: 0.65rem;
 }
 
 .reader-top-info {
   flex: 1;
-  min-width: 10rem;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   line-height: 1.25;
@@ -431,17 +571,27 @@
 
 .reader-top-info strong {
   font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .reader-top-info span {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
-.reader-top-actions {
-  display: flex;
-  gap: 0.5rem;
+.btn-icon {
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  line-height: 1;
+  flex: none;
 }
 
 .chip {
@@ -476,24 +626,22 @@
   transition: width 0.35s ease;
 }
 
-.page-indicator {
-  margin: 0;
-  text-align: center;
-  font-weight: 800;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
 .story-stage {
+  position: relative;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 1.1rem;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 0.85rem;
   align-items: stretch;
+  min-height: 0;
+  /* Let the browser own vertical scroll; we only claim horizontal drags. */
+  touch-action: pan-y;
 }
 
-@media (max-width: 860px) {
+/* Portrait tablets read better with the art on top of the words. */
+@media (orientation: portrait), (max-width: 860px) {
   .story-stage {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, auto) minmax(0, 1fr);
   }
 }
 
@@ -501,34 +649,89 @@
   position: relative;
   border-radius: 1.5rem;
   overflow: hidden;
-  background: white;
+  background: linear-gradient(160deg, #fff7ed, #eef2ff);
   box-shadow: var(--shadow-card);
   border: 4px solid rgba(255, 255, 255, 0.95);
-  min-height: 260px;
+  min-height: 0;
+  display: flex;
 }
 
+/* `contain` keeps whole characters on screen — cropping a picture book hurts. */
 .story-art {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  min-height: 0;
+  object-fit: contain;
   display: block;
   animation: fade-in 0.35s ease;
+}
+
+.story-art.turn-next {
+  animation: slide-from-right 0.3s ease;
+}
+
+.story-art.turn-prev {
+  animation: slide-from-left 0.3s ease;
 }
 
 .story-stage.is-reading .story-art-frame {
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25), var(--shadow-card);
 }
 
+.swipe-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 0.9rem;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  color: white;
+  font-weight: 800;
+  font-size: 0.9rem;
+  animation: nudge 1.6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
 .story-text-panel {
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.95);
   border-radius: 1.5rem;
-  padding: 1.25rem 1.3rem 1.15rem;
+  padding: 0.9rem 1rem;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Only the story text scrolls — the controls stay pinned and reachable. */
+.story-text-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Short pages sit centred; long ones start at the top and scroll normally. */
+.story-text-scroll > * {
+  margin-block: auto;
+}
+
+.panel-controls {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .story-english {
@@ -679,35 +882,6 @@
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
 }
 
-.speed-hint {
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #7c3aed;
-}
-
-.cast-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.cast-pill {
-  font-size: 0.8rem;
-  font-weight: 800;
-  padding: 0.3rem 0.65rem;
-  border-radius: 999px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  color: #475569;
-}
-
-.cast-pill.is-on {
-  background: color-mix(in srgb, var(--cast, #a78bfa) 18%, white);
-  border-color: var(--cast, #a78bfa);
-  color: #0f172a;
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--cast, #a78bfa) 25%, transparent);
-}
-
 .now-speaking {
   position: absolute;
   left: 0.75rem;
@@ -854,9 +1028,7 @@
 }
 
 .reader.is-en .reader-top-info strong,
-.reader.is-en .page-indicator,
-.reader.is-en .voice-hint,
-.reader.is-en .speaking-dot {
+.reader.is-en .voice-hint {
   direction: ltr;
   unicode-bidi: isolate;
 }
@@ -875,7 +1047,6 @@
 }
 
 .voice-hint,
-.speaking-dot,
 .audio-fallback {
   margin: 0;
   font-size: 0.82rem;
@@ -883,31 +1054,65 @@
   font-weight: 600;
 }
 
-.speaking-dot {
-  color: #4f46e5;
-  font-weight: 800;
-}
-
 .reader-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-top: 0.35rem;
-  flex-wrap: wrap;
+}
+
+.nav-center {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Secondary to swiping, but kept for reach, keyboards and grown-ups. */
+.page-arrow {
+  appearance: none;
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-soft);
+  font: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #475569;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.page-arrow:not(:disabled):active {
+  transform: scale(0.94);
+}
+
+.page-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.page-arrow.is-finish {
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-color: #fcd34d;
 }
 
 .dots {
   display: flex;
-  gap: 0.45rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
   justify-content: center;
-  flex: 1;
 }
 
 .dot {
-  width: 0.85rem;
-  height: 0.85rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 999px;
   border: none;
   background: #cbd5e1;
@@ -925,9 +1130,20 @@
   transform: scale(1.25);
 }
 
+/* The end screen replaces the stage, so it scrolls inside the same frame. */
+.story-stage.is-end {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+}
+
 .story-end {
-  margin-top: 0.5rem;
-  padding: 1.25rem 1.4rem;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: grid;
+  align-content: safe center;
+  gap: 0.4rem;
+  padding: 1.1rem 1.2rem 1.3rem;
   border-radius: 1.4rem;
   background: linear-gradient(135deg, rgba(254, 243, 199, 0.9), rgba(237, 233, 254, 0.9));
   border: 1px solid rgba(255, 255, 255, 0.95);
@@ -945,6 +1161,147 @@
   margin: 0;
   color: var(--muted);
   font-weight: 700;
+}
+
+/* —— End-of-story questions —— */
+.quiz {
+  margin: 1rem auto 0;
+  max-width: 44rem;
+  padding: 1rem 1.1rem 1.15rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-soft);
+}
+
+.quiz-step {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #7c3aed;
+}
+
+.quiz-question {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quiz-option {
+  position: relative;
+  appearance: none;
+  border: 3px solid #e2e8f0;
+  background: white;
+  border-radius: 1.15rem;
+  padding: 0.6rem;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 5.5rem;
+  overflow: hidden;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.quiz-option:not(:disabled):hover {
+  border-color: #c4b5fd;
+  transform: translateY(-2px);
+}
+
+.quiz-option:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+.quiz-option.is-correct {
+  border-color: #34d399;
+  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.28);
+  animation: pop 0.35s ease;
+}
+
+.quiz-options.is-image .quiz-option {
+  padding: 0;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+.quiz-option-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.quiz-option-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.quiz-option-word {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #334155;
+}
+
+.quiz-tick {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.4rem;
+  font-size: 1.2rem;
+  filter: drop-shadow(0 2px 4px rgba(15, 23, 42, 0.3));
+}
+
+.quiz-hint {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.quiz-hint.is-retry {
+  color: #b45309;
+  animation: shake 0.35s ease;
+}
+
+.quiz-done {
+  text-align: center;
+}
+
+.quiz-done-emoji {
+  margin: 0;
+  font-size: 2.6rem;
+  line-height: 1;
+  animation: pop 0.4s ease;
+}
+
+.quiz-done h3 {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.quiz-stars {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+
+.quiz-stars span {
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+
+.quiz-stars span.is-earned {
+  opacity: 1;
+  filter: none;
 }
 
 .end-goals {
@@ -997,5 +1354,93 @@
   }
   50% {
     box-shadow: 0 10px 28px rgba(236, 72, 153, 0.35);
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(9%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-9%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.85);
+  }
+  60% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(calc(-50% + 8px));
+  }
+}
+
+/*
+ * Short landscape (a tablet held sideways) is the tightest case: shrink the
+ * story text and controls so the fixed frame still holds everything.
+ */
+@media (orientation: landscape) and (max-height: 620px) {
+  .story-english {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.55;
+  }
+
+  .story-line {
+    padding: 0.45rem 0.6rem;
+  }
+
+  .story-lines {
+    gap: 0.5rem;
+  }
+
+  .story-text-panel {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .btn {
+    padding: 0.6rem 0.95rem;
+  }
+
+  .speed-control {
+    padding: 0.4rem 0.55rem;
   }
 }

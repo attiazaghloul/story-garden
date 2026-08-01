@@ -3,6 +3,7 @@ import { Home } from './components/Home'
 import { LanguagePick } from './components/LanguagePick'
 import { StoryReader } from './components/StoryReader'
 import { ARABIC_ENABLED } from './config'
+import { useGarden } from './hooks/useGarden'
 import { getStoryById, stories, type StoryLang } from './data/stories'
 import './App.css'
 
@@ -13,6 +14,7 @@ type View =
 
 export default function App() {
   const [view, setView] = useState<View>({ name: 'home' })
+  const garden = useGarden()
 
   if (view.name === 'lang' || view.name === 'story') {
     const story = getStoryById(view.storyId)
@@ -43,15 +45,22 @@ export default function App() {
       )
     }
 
+    const saved = garden.progressFor(story.id)
     return (
-      <div className="app-shell">
+      <div className="app-shell is-reader">
         <main className="app-main">
           <StoryReader
+            key={`${story.id}-${view.name === 'story' ? view.lang : 'en'}`}
             story={story}
             lang={view.name === 'story' ? view.lang : 'en'}
+            // Finished stories start over; an interrupted one picks up where it stopped.
+            startPage={saved.finished ? 0 : saved.lastPage}
             onBack={() => setView({ name: 'home' })}
             onChangeLang={() => setView({ name: 'lang', storyId: story.id })}
             showLanguageSwitcher={ARABIC_ENABLED}
+            onPageChange={(pageIndex, isLast) => garden.markPage(story.id, pageIndex, isLast)}
+            onWordHeard={garden.collectWord}
+            onStars={(stars) => garden.awardStars(story.id, stars)}
           />
         </main>
       </div>
@@ -66,6 +75,11 @@ export default function App() {
           onOpenStory={(storyId) =>
             setView(ARABIC_ENABLED ? { name: 'lang', storyId } : { name: 'story', storyId, lang: 'en' })
           }
+          progressFor={garden.progressFor}
+          words={garden.words}
+          totalStars={garden.totalStars}
+          finishedCount={garden.finishedCount}
+          onResetProgress={garden.resetAll}
         />
       </main>
       <footer className="app-footer">
