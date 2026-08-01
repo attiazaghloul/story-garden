@@ -20,6 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The over-the-air build version is the commit count, so the default
+          # shallow clone would report 1 on every release.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -29,6 +33,11 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+
+      # Publishes ota/latest.json beside the site so the installed Android app
+      # can update its content silently. Must run after the site build: it
+      # links unchanged story media to the copies the site already serves.
+      - run: npm run build:ota
 
       - uses: actions/configure-pages@v5
 

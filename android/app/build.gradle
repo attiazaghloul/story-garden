@@ -7,8 +7,11 @@ android {
         applicationId "io.github.attiazaghloul.storygarden"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        // Bump on every APK you distribute. Raising this also tells the OTA
+        // plugin to discard bundles downloaded by the previous APK, so a fresh
+        // install is always the floor and never loses to stale content.
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.

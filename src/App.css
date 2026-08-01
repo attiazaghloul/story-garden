@@ -1336,6 +1336,41 @@
   color: var(--muted);
 }
 
+/* Shown by ErrorBoundary — never a blank screen. */
+.crash-card {
+  max-width: 26rem;
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-card);
+}
+
+.crash-emoji {
+  margin: 0;
+  font-size: 2.75rem;
+  line-height: 1;
+}
+
+.crash-card h1 {
+  margin: 0.5rem 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.crash-card p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.app-version {
+  margin: 0.75rem 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

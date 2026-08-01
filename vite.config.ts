@@ -1,17 +1,30 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { buildVersion } from './scripts/version.mjs'
 
 // Served from https://<user>.github.io/story-garden/ — override with
 // BASE_PATH=/ when deploying to a domain root instead.
 const BASE = process.env.BASE_PATH ?? '/story-garden/'
 
+// Where the installed Android app looks for over-the-air content updates.
+const OTA_ORIGIN = process.env.OTA_ORIGIN ?? 'https://attiazaghloul.github.io/story-garden'
+
 // https://vite.dev/config/
 export default defineConfig({
   base: BASE,
+  define: {
+    __APP_VERSION__: JSON.stringify(buildVersion()),
+    __OTA_ORIGIN__: JSON.stringify(OTA_ORIGIN.replace(/\/$/, '')),
+  },
   plugins: [
     react(),
     VitePWA({
+      // The Android build must not carry a service worker: inside the native
+      // WebView it would cache the web bundle and fight the OTA updater for
+      // control of which code runs. Capacitor gets its updates from
+      // src/lib/appUpdate.ts instead.
+      disable: process.env.CAPACITOR === 'true',
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons/apple-touch-icon.png'],
       manifest: {

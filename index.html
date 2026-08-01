@@ -18,7 +18,53 @@
     <title>Story Garden</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Painted before any JavaScript runs and removed on React's first frame.
+        If the bundle is slow, or fails to load entirely, the child sees the
+        garden waking up rather than a white screen.
+      -->
+      <div id="boot-fallback">
+        <div class="boot-mark" aria-hidden="true">📖</div>
+        <p class="boot-title">Story Garden</p>
+        <p class="boot-sub">Opening the garden…</p>
+      </div>
+    </div>
+    <style>
+      #boot-fallback {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background: linear-gradient(180deg, #fff9f2 0%, #f7fbff 45%, #f4f0ff 100%);
+        font-family: system-ui, sans-serif;
+        color: #1e293b;
+      }
+      #boot-fallback .boot-mark {
+        font-size: 3rem;
+        animation: boot-pulse 1.6s ease-in-out infinite;
+      }
+      #boot-fallback .boot-title {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      #boot-fallback .boot-sub {
+        margin: 0;
+        color: #64748b;
+        font-weight: 600;
+      }
+      @keyframes boot-pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.12); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #boot-fallback .boot-mark { animation: none; }
+      }
+    </style>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 import type { Story } from '../data/stories'
 import type { StoryProgress } from '../hooks/useGarden'
+import { APP_VERSION } from '../lib/appUpdate'
 import { InstallButton } from './InstallButton'
 import { WordBasket } from './WordBasket'
 
@@ -139,6 +140,9 @@ export function Home({
           consistent playback. Children can tap any word to hear it again without leaving the page.
           Stars come from two gentle questions at the end of each story — a wrong tap never ends the
           activity, it just invites another try.
+        </p>
+        <p className="app-version">
+          Version {APP_VERSION} · updates install themselves in the background
         </p>
         {(finishedCount > 0 || words.length > 0) && (
           <button type="button" className="btn btn-ghost reset-btn" onClick={onResetProgress}>

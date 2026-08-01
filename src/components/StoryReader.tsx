@@ -4,6 +4,7 @@ import { SPEAKER_META, segmentAudio, speakerLabel } from '../data/stories'
 import { SPEED_OPTIONS, useStoryAudio } from '../hooks/useStoryAudio'
 import { useSwipe } from '../hooks/useSwipe'
 import { useWordAudioMap } from '../hooks/useWordAudioMap'
+import { prefetchStory } from '../lib/prefetchStory'
 import { ClickableStoryText } from './ClickableStoryText'
 import { StoryQuiz } from './StoryQuiz'
 
@@ -66,6 +67,10 @@ export function StoryReader({
   }, [pageIndex])
 
   useEffect(() => () => stop(), [stop])
+
+  // Pull the rest of the story down while page one is being read, so the child
+  // can finish it even if the network drops.
+  useEffect(() => prefetchStory(story, lang), [story, lang])
 
   useEffect(() => {
     onPageChange?.(pageIndex, pageIndex === total - 1)

@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:android": "cross-env BASE_PATH=/ CAPACITOR=true npm run build && node scripts/prepare_android.mjs",
+    "build:ota": "cross-env BASE_PATH=/ CAPACITOR=true vite build --outDir dist-android --emptyOutDir && node scripts/build_ota.mjs dist-android dist",
     "android:sync": "npm run build:android && cap sync android",
     "android:apk": "npm run android:sync && cd android && gradlew.bat assembleRelease",
     "lint": "oxlint",
@@ -15,6 +16,8 @@
   },
   "dependencies": {
     "@capacitor/core": "^7.6.4",
+    "@capacitor/network": "^7.0.4",
+    "@capgo/capacitor-updater": "^7.50.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
